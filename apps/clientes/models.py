@@ -25,8 +25,8 @@ class Cliente(models.Model):
         help_text="Fecha de nacimiento del cliente"
     )
     edad = models.IntegerField(
-        validators=[MinValueValidator(1), MaxValueValidator(99)],
-        help_text="Edad del cliente (calculada automáticamente)"
+        validators=[MinValueValidator(18), MaxValueValidator(99)],
+        help_text="Edad del cliente (calculada automáticamente, mínimo 18 años)"
     )
     nacionalidad = models.CharField(
         max_length=100,
@@ -91,25 +91,24 @@ class Cliente(models.Model):
 
     def clean(self):
         """
-        Validar que la edad coincida con la fecha de nacimiento.
+        Validar datos del cliente.
+        La edad se calcula automáticamente en save(), así que no la validamos aquí.
         """
         from django.core.exceptions import ValidationError
         
+        # Validar rango de edad solo si está establecida y es diferente de la calculada
+        # (esto puede pasar durante actualizaciones antes de que save() recalcule)
         if self.fecha_nacimiento:
             calculated_age = self.calculate_age()
-            if calculated_age is not None and self.edad != calculated_age:
-                raise ValidationError(
-                    {
-                        'edad': f'La edad debe ser {calculated_age} según la fecha de nacimiento.'
-                    }
-                )
-        
-        if self.edad < 1 or self.edad > 99:
-            raise ValidationError(
-                {
-                    'edad': 'La edad debe estar entre 1 y 99 años.'
-                }
-            )
+            if calculated_age is not None:
+                # Si la edad no coincide, no validar aquí porque save() la recalculará
+                # Solo validar el rango de la edad calculada
+                if calculated_age < 1 or calculated_age > 99:
+                    raise ValidationError(
+                        {
+                            'fecha_nacimiento': f'La fecha de nacimiento resulta en una edad inválida ({calculated_age} años). La edad debe estar entre 1 y 99 años.'
+                        }
+                    )
 
     def save(self, *args, **kwargs):
         """

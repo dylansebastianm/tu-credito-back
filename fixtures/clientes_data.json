@@ -1,0 +1,631 @@
+[
+{
+  "model": "clientes.cliente",
+  "pk": 1,
+  "fields": {
+    "nombre_completo": "Carmen Sánchez Ramírez",
+    "fecha_nacimiento": "2001-01-05",
+    "edad": 25,
+    "nacionalidad": null,
+    "direccion": "Av. Principal 454, Col. Centro",
+    "email": "cliente1@example.com",
+    "telefono": "+52 55 9849 5041",
+    "tipo_persona": "JURIDICO",
+    "banco": 11,
+    "created_at": "2026-01-20T17:11:03.558Z",
+    "updated_at": "2026-01-20T17:11:03.558Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 2,
+  "fields": {
+    "nombre_completo": "Pedro Sánchez García",
+    "fecha_nacimiento": "1999-12-24",
+    "edad": 26,
+    "nacionalidad": "Canadiense",
+    "direccion": "Av. Principal 973, Col. Centro",
+    "email": "cliente2@example.com",
+    "telefono": "+52 55 2349 1698",
+    "tipo_persona": "NATURAL",
+    "banco": 9,
+    "created_at": "2026-01-20T17:11:03.574Z",
+    "updated_at": "2026-01-20T17:11:03.574Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 3,
+  "fields": {
+    "nombre_completo": "Pedro González Torres",
+    "fecha_nacimiento": "1971-11-03",
+    "edad": 54,
+    "nacionalidad": "Estadounidense",
+    "direccion": "Av. Principal 617, Col. Centro",
+    "email": "cliente3@example.com",
+    "telefono": "+52 55 3780 8637",
+    "tipo_persona": "JURIDICO",
+    "banco": 8,
+    "created_at": "2026-01-20T17:11:03.581Z",
+    "updated_at": "2026-01-20T17:11:03.581Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 4,
+  "fields": {
+    "nombre_completo": "Carmen Martínez Rodríguez",
+    "fecha_nacimiento": "1998-08-25",
+    "edad": 27,
+    "nacionalidad": "Estadounidense",
+    "direccion": "Av. Principal 170, Col. Centro",
+    "email": "cliente4@example.com",
+    "telefono": "+52 55 7098 4370",
+    "tipo_persona": "NATURAL",
+    "banco": 9,
+    "created_at": "2026-01-20T17:11:03.586Z",
+    "updated_at": "2026-01-20T17:11:03.586Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 5,
+  "fields": {
+    "nombre_completo": "Diego Ramírez Torres",
+    "fecha_nacimiento": "1970-10-23",
+    "edad": 55,
+    "nacionalidad": "Canadiense",
+    "direccion": "Av. Principal 206, Col. Centro",
+    "email": "cliente5@example.com",
+    "telefono": "+52 55 4835 2676",
+    "tipo_persona": "JURIDICO",
+    "banco": 4,
+    "created_at": "2026-01-20T17:11:03.589Z",
+    "updated_at": "2026-01-20T17:11:03.589Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 6,
+  "fields": {
+    "nombre_completo": "Ana García López",
+    "fecha_nacimiento": "2003-08-02",
+    "edad": 22,
+    "nacionalidad": "Mexicana",
+    "direccion": "Av. Principal 249, Col. Centro",
+    "email": "cliente6@example.com",
+    "telefono": "+52 55 2570 9404",
+    "tipo_persona": "JURIDICO",
+    "banco": 2,
+    "created_at": "2026-01-20T17:11:03.592Z",
+    "updated_at": "2026-01-20T17:11:03.592Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 7,
+  "fields": {
+    "nombre_completo": "Sofía Fernández Pérez",
+    "fecha_nacimiento": "1987-01-10",
+    "edad": 39,
+    "nacionalidad": "Canadiense",
+    "direccion": "Av. Principal 967, Col. Centro",
+    "email": "cliente7@example.com",
+    "telefono": "+52 55 9453 8407",
+    "tipo_persona": "JURIDICO",
+    "banco": 8,
+    "created_at": "2026-01-20T17:11:03.599Z",
+    "updated_at": "2026-01-20T17:11:03.599Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 8,
+  "fields": {
+    "nombre_completo": "Carlos Sánchez Pérez",
+    "fecha_nacimiento": "1985-12-05",
+    "edad": 40,
+    "nacionalidad": "Estadounidense",
+    "direccion": "Av. Principal 802, Col. Centro",
+    "email": "cliente8@example.com",
+    "telefono": "+52 55 9253 4369",
+    "tipo_persona": "NATURAL",
+    "banco": 2,
+    "created_at": "2026-01-20T17:11:03.604Z",
+    "updated_at": "2026-01-20T17:11:03.604Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 9,
+  "fields": {
+    "nombre_completo": "María González Rodríguez",
+    "fecha_nacimiento": "1993-03-30",
+    "edad": 32,
+    "nacionalidad": "Española",
+    "direccion": "Av. Principal 413, Col. Centro",
+    "email": "cliente9@example.com",
+    "telefono": "+52 55 9508 1075",
+    "tipo_persona": "NATURAL",
+    "banco": 10,
+    "created_at": "2026-01-20T17:11:03.608Z",
+    "updated_at": "2026-01-20T17:11:03.608Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 10,
+  "fields": {
+    "nombre_completo": "Pedro Martínez González",
+    "fecha_nacimiento": "1991-03-05",
+    "edad": 34,
+    "nacionalidad": "Canadiense",
+    "direccion": "Av. Principal 488, Col. Centro",
+    "email": "cliente10@example.com",
+    "telefono": "+52 55 2138 1204",
+    "tipo_persona": "JURIDICO",
+    "banco": 7,
+    "created_at": "2026-01-20T17:11:03.614Z",
+    "updated_at": "2026-01-20T17:11:03.614Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 11,
+  "fields": {
+    "nombre_completo": "Juan Sánchez Ramírez",
+    "fecha_nacimiento": "1980-07-09",
+    "edad": 45,
+    "nacionalidad": null,
+    "direccion": "Av. Principal 584, Col. Centro",
+    "email": "cliente11@example.com",
+    "telefono": "+52 55 3838 3742",
+    "tipo_persona": "NATURAL",
+    "banco": 4,
+    "created_at": "2026-01-20T17:11:03.618Z",
+    "updated_at": "2026-01-20T17:11:03.618Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 12,
+  "fields": {
+    "nombre_completo": "Diego Rodríguez Martínez",
+    "fecha_nacimiento": "1970-09-11",
+    "edad": 55,
+    "nacionalidad": "Española",
+    "direccion": "Av. Principal 477, Col. Centro",
+    "email": "cliente12@example.com",
+    "telefono": "+52 55 5614 7277",
+    "tipo_persona": "JURIDICO",
+    "banco": null,
+    "created_at": "2026-01-20T17:11:03.619Z",
+    "updated_at": "2026-01-20T17:11:03.619Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 13,
+  "fields": {
+    "nombre_completo": "Ana Ramírez Fernández",
+    "fecha_nacimiento": "1983-11-18",
+    "edad": 42,
+    "nacionalidad": null,
+    "direccion": "Av. Principal 935, Col. Centro",
+    "email": "cliente13@example.com",
+    "telefono": "+52 55 3589 7000",
+    "tipo_persona": "JURIDICO",
+    "banco": 2,
+    "created_at": "2026-01-20T17:11:03.621Z",
+    "updated_at": "2026-01-20T17:11:03.621Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 14,
+  "fields": {
+    "nombre_completo": "Pedro García Fernández",
+    "fecha_nacimiento": "1982-01-09",
+    "edad": 44,
+    "nacionalidad": "Estadounidense",
+    "direccion": "Av. Principal 464, Col. Centro",
+    "email": "cliente14@example.com",
+    "telefono": "+52 55 4541 1301",
+    "tipo_persona": "JURIDICO",
+    "banco": 8,
+    "created_at": "2026-01-20T17:11:03.629Z",
+    "updated_at": "2026-01-20T17:11:03.629Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 15,
+  "fields": {
+    "nombre_completo": "Luis Torres Torres",
+    "fecha_nacimiento": "1989-04-04",
+    "edad": 36,
+    "nacionalidad": null,
+    "direccion": "Av. Principal 928, Col. Centro",
+    "email": "cliente15@example.com",
+    "telefono": "+52 55 6013 3984",
+    "tipo_persona": "NATURAL",
+    "banco": 11,
+    "created_at": "2026-01-20T17:11:03.633Z",
+    "updated_at": "2026-01-20T17:11:03.633Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 16,
+  "fields": {
+    "nombre_completo": "Pedro Fernández Pérez",
+    "fecha_nacimiento": "2004-11-23",
+    "edad": 21,
+    "nacionalidad": "Canadiense",
+    "direccion": "Av. Principal 824, Col. Centro",
+    "email": "cliente16@example.com",
+    "telefono": "+52 55 7946 3590",
+    "tipo_persona": "NATURAL",
+    "banco": 11,
+    "created_at": "2026-01-20T17:11:03.635Z",
+    "updated_at": "2026-01-20T17:11:03.635Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 17,
+  "fields": {
+    "nombre_completo": "Pedro López García",
+    "fecha_nacimiento": "1964-11-06",
+    "edad": 61,
+    "nacionalidad": "Mexicana",
+    "direccion": "Av. Principal 319, Col. Centro",
+    "email": "cliente17@example.com",
+    "telefono": "+52 55 1795 2911",
+    "tipo_persona": "NATURAL",
+    "banco": 5,
+    "created_at": "2026-01-20T17:11:03.638Z",
+    "updated_at": "2026-01-20T17:11:03.638Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 18,
+  "fields": {
+    "nombre_completo": "Laura Ramírez Torres",
+    "fecha_nacimiento": "1977-08-23",
+    "edad": 48,
+    "nacionalidad": "Canadiense",
+    "direccion": "Av. Principal 532, Col. Centro",
+    "email": "cliente18@example.com",
+    "telefono": "+52 55 2367 7650",
+    "tipo_persona": "NATURAL",
+    "banco": 3,
+    "created_at": "2026-01-20T17:11:03.644Z",
+    "updated_at": "2026-01-20T17:11:03.644Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 19,
+  "fields": {
+    "nombre_completo": "Laura López Sánchez",
+    "fecha_nacimiento": "1984-08-07",
+    "edad": 41,
+    "nacionalidad": "Canadiense",
+    "direccion": "Av. Principal 913, Col. Centro",
+    "email": "cliente19@example.com",
+    "telefono": "+52 55 5133 7715",
+    "tipo_persona": "NATURAL",
+    "banco": 12,
+    "created_at": "2026-01-20T17:11:03.648Z",
+    "updated_at": "2026-01-20T17:11:03.648Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 20,
+  "fields": {
+    "nombre_completo": "Ana Ramírez López",
+    "fecha_nacimiento": "2000-01-11",
+    "edad": 26,
+    "nacionalidad": null,
+    "direccion": "Av. Principal 847, Col. Centro",
+    "email": "cliente20@example.com",
+    "telefono": "+52 55 9551 5398",
+    "tipo_persona": "JURIDICO",
+    "banco": 9,
+    "created_at": "2026-01-20T17:11:03.652Z",
+    "updated_at": "2026-01-20T17:11:03.652Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 21,
+  "fields": {
+    "nombre_completo": "Diego García Torres",
+    "fecha_nacimiento": "1962-09-28",
+    "edad": 63,
+    "nacionalidad": "Española",
+    "direccion": "Av. Principal 929, Col. Centro",
+    "email": "cliente21@example.com",
+    "telefono": "+52 55 4346 8669",
+    "tipo_persona": "NATURAL",
+    "banco": 1,
+    "created_at": "2026-01-20T17:11:03.656Z",
+    "updated_at": "2026-01-20T17:11:03.656Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 22,
+  "fields": {
+    "nombre_completo": "Sofía Martínez Ramírez",
+    "fecha_nacimiento": "1994-03-02",
+    "edad": 31,
+    "nacionalidad": "Canadiense",
+    "direccion": "Av. Principal 907, Col. Centro",
+    "email": "cliente22@example.com",
+    "telefono": "+52 55 4327 2234",
+    "tipo_persona": "JURIDICO",
+    "banco": 2,
+    "created_at": "2026-01-20T17:11:03.662Z",
+    "updated_at": "2026-01-20T17:11:03.662Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 23,
+  "fields": {
+    "nombre_completo": "Diego López Martínez",
+    "fecha_nacimiento": "1991-07-30",
+    "edad": 34,
+    "nacionalidad": "Canadiense",
+    "direccion": "Av. Principal 242, Col. Centro",
+    "email": "cliente23@example.com",
+    "telefono": "+52 55 8751 2939",
+    "tipo_persona": "JURIDICO",
+    "banco": null,
+    "created_at": "2026-01-20T17:11:03.664Z",
+    "updated_at": "2026-01-20T17:11:03.664Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 24,
+  "fields": {
+    "nombre_completo": "Laura García Torres",
+    "fecha_nacimiento": "1989-12-22",
+    "edad": 36,
+    "nacionalidad": "Estadounidense",
+    "direccion": "Av. Principal 850, Col. Centro",
+    "email": "cliente24@example.com",
+    "telefono": "+52 55 1345 7153",
+    "tipo_persona": "JURIDICO",
+    "banco": 3,
+    "created_at": "2026-01-20T17:11:03.669Z",
+    "updated_at": "2026-01-20T17:11:03.669Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 25,
+  "fields": {
+    "nombre_completo": "María Sánchez Sánchez",
+    "fecha_nacimiento": "1993-03-22",
+    "edad": 32,
+    "nacionalidad": "Canadiense",
+    "direccion": "Av. Principal 393, Col. Centro",
+    "email": "cliente25@example.com",
+    "telefono": "+52 55 1000 8914",
+    "tipo_persona": "JURIDICO",
+    "banco": 8,
+    "created_at": "2026-01-20T17:11:03.671Z",
+    "updated_at": "2026-01-20T17:11:03.671Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 26,
+  "fields": {
+    "nombre_completo": "Carlos González Martínez",
+    "fecha_nacimiento": "2007-08-05",
+    "edad": 18,
+    "nacionalidad": "Canadiense",
+    "direccion": "Av. Principal 489, Col. Centro",
+    "email": "cliente26@example.com",
+    "telefono": "+52 55 6605 3473",
+    "tipo_persona": "JURIDICO",
+    "banco": 7,
+    "created_at": "2026-01-20T17:11:03.675Z",
+    "updated_at": "2026-01-20T17:11:03.675Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 27,
+  "fields": {
+    "nombre_completo": "Carlos García Pérez",
+    "fecha_nacimiento": "1998-12-25",
+    "edad": 27,
+    "nacionalidad": "Canadiense",
+    "direccion": "Av. Principal 911, Col. Centro",
+    "email": "cliente27@example.com",
+    "telefono": "+52 55 9823 9331",
+    "tipo_persona": "JURIDICO",
+    "banco": 1,
+    "created_at": "2026-01-20T17:11:03.681Z",
+    "updated_at": "2026-01-20T17:11:03.681Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 28,
+  "fields": {
+    "nombre_completo": "Juan Torres Ramírez",
+    "fecha_nacimiento": "2000-01-09",
+    "edad": 26,
+    "nacionalidad": "Mexicana",
+    "direccion": "Av. Principal 288, Col. Centro",
+    "email": "cliente28@example.com",
+    "telefono": "+52 55 9957 5974",
+    "tipo_persona": "JURIDICO",
+    "banco": 1,
+    "created_at": "2026-01-20T17:11:03.684Z",
+    "updated_at": "2026-01-20T17:11:03.684Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 29,
+  "fields": {
+    "nombre_completo": "Laura Sánchez Martínez",
+    "fecha_nacimiento": "1970-01-04",
+    "edad": 56,
+    "nacionalidad": "Canadiense",
+    "direccion": "Av. Principal 845, Col. Centro",
+    "email": "cliente29@example.com",
+    "telefono": "+52 55 6221 5699",
+    "tipo_persona": "NATURAL",
+    "banco": 7,
+    "created_at": "2026-01-20T17:11:03.691Z",
+    "updated_at": "2026-01-20T17:11:03.691Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 30,
+  "fields": {
+    "nombre_completo": "Laura García García",
+    "fecha_nacimiento": "1965-09-07",
+    "edad": 60,
+    "nacionalidad": "Mexicana",
+    "direccion": "Av. Principal 892, Col. Centro",
+    "email": "cliente30@example.com",
+    "telefono": "+52 55 1413 5998",
+    "tipo_persona": "JURIDICO",
+    "banco": 5,
+    "created_at": "2026-01-20T17:11:03.697Z",
+    "updated_at": "2026-01-20T17:11:03.697Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 31,
+  "fields": {
+    "nombre_completo": "Ana Torres Rodríguez",
+    "fecha_nacimiento": "1990-10-15",
+    "edad": 35,
+    "nacionalidad": "Mexicana",
+    "direccion": "Av. Principal 308, Col. Centro",
+    "email": "cliente31@example.com",
+    "telefono": "+52 55 9676 9617",
+    "tipo_persona": "NATURAL",
+    "banco": 7,
+    "created_at": "2026-01-20T17:11:03.701Z",
+    "updated_at": "2026-01-20T17:11:03.701Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 32,
+  "fields": {
+    "nombre_completo": "Pedro Sánchez Pérez",
+    "fecha_nacimiento": "2006-12-17",
+    "edad": 19,
+    "nacionalidad": "Canadiense",
+    "direccion": "Av. Principal 838, Col. Centro",
+    "email": "cliente32@example.com",
+    "telefono": "+52 55 5846 2780",
+    "tipo_persona": "NATURAL",
+    "banco": 5,
+    "created_at": "2026-01-20T17:11:03.703Z",
+    "updated_at": "2026-01-20T17:11:03.703Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 33,
+  "fields": {
+    "nombre_completo": "Pedro Pérez Ramírez",
+    "fecha_nacimiento": "1966-10-09",
+    "edad": 59,
+    "nacionalidad": "Canadiense",
+    "direccion": "Av. Principal 676, Col. Centro",
+    "email": "cliente33@example.com",
+    "telefono": "+52 55 5645 8584",
+    "tipo_persona": "JURIDICO",
+    "banco": 6,
+    "created_at": "2026-01-20T17:11:03.708Z",
+    "updated_at": "2026-01-20T17:11:03.708Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 34,
+  "fields": {
+    "nombre_completo": "Pedro López Pérez",
+    "fecha_nacimiento": "1991-06-10",
+    "edad": 34,
+    "nacionalidad": null,
+    "direccion": "Av. Principal 225, Col. Centro",
+    "email": "cliente34@example.com",
+    "telefono": "+52 55 9541 8431",
+    "tipo_persona": "JURIDICO",
+    "banco": 8,
+    "created_at": "2026-01-20T17:11:03.714Z",
+    "updated_at": "2026-01-20T17:11:03.714Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 35,
+  "fields": {
+    "nombre_completo": "María Torres González",
+    "fecha_nacimiento": "1961-12-31",
+    "edad": 64,
+    "nacionalidad": null,
+    "direccion": "Av. Principal 637, Col. Centro",
+    "email": "cliente35@example.com",
+    "telefono": "+52 55 8553 9317",
+    "tipo_persona": "NATURAL",
+    "banco": null,
+    "created_at": "2026-01-20T17:11:03.714Z",
+    "updated_at": "2026-01-20T17:11:03.714Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 36,
+  "fields": {
+    "nombre_completo": "Cliente prueba 1",
+    "fecha_nacimiento": "2001-01-07",
+    "edad": 25,
+    "nacionalidad": "Argentina",
+    "direccion": "Calle 123",
+    "email": "prueba1@gmail.com",
+    "telefono": "+541152639875",
+    "tipo_persona": "NATURAL",
+    "banco": null,
+    "created_at": "2026-01-20T20:23:22.430Z",
+    "updated_at": "2026-01-20T20:32:13.974Z"
+  }
+},
+{
+  "model": "clientes.cliente",
+  "pk": 37,
+  "fields": {
+    "nombre_completo": "Cliente prueba 2",
+    "fecha_nacimiento": "1994-10-06",
+    "edad": 31,
+    "nacionalidad": "Mexicana",
+    "direccion": "Calle 123",
+    "email": "prueba@gmail.com",
+    "telefono": "+541151759666",
+    "tipo_persona": "JURIDICO",
+    "banco": null,
+    "created_at": "2026-01-20T22:18:24.857Z",
+    "updated_at": "2026-01-20T22:18:24.858Z"
+  }
+}
+]

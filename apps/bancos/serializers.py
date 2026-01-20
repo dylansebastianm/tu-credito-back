@@ -80,6 +80,37 @@ class BancoSerializer(serializers.ModelSerializer):
             )
         return value
 
+    def validate_email(self, value):
+        """
+        Validar formato de email.
+        """
+        if not value or not value.strip():
+            raise serializers.ValidationError("El email es requerido.")
+        if '@' not in value:
+            raise serializers.ValidationError("Debe proporcionar un email válido.")
+        return value.lower().strip()
+
+    def validate_telefono(self, value):
+        """
+        Validar teléfono.
+        """
+        if not value or not value.strip():
+            raise serializers.ValidationError("El teléfono es requerido.")
+        # Validar que tenga entre 10 y 15 dígitos (después de limpiar)
+        import re
+        cleaned = re.sub(r'[\s\-\(\)\+]', '', value)
+        if len(cleaned) < 10 or len(cleaned) > 15:
+            raise serializers.ValidationError("El teléfono debe tener entre 10 y 15 dígitos.")
+        return value.strip()
+
+    def validate_direccion(self, value):
+        """
+        Validar dirección.
+        """
+        if not value or not value.strip():
+            raise serializers.ValidationError("La dirección es requerida.")
+        return value.strip()
+
     def validate(self, attrs):
         """
         Validaciones cruzadas.

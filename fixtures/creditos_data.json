@@ -1,0 +1,1202 @@
+[
+{
+  "model": "creditos.credito",
+  "pk": 1,
+  "fields": {
+    "cliente": 9,
+    "descripcion": "Crédito hipotecario para vivienda",
+    "monto": "111855.46",
+    "pago_minimo": "7655.32",
+    "pago_maximo": "10637.48",
+    "plazo_meses": 13,
+    "fecha_registro": "2026-01-20T17:11:03.730Z",
+    "banco": 12,
+    "tipo_credito": "HIPOTECARIO",
+    "tasa_interes": "14.93",
+    "cuota_mensual": "9372.15",
+    "monto_total": "121837.95",
+    "created_at": "2026-01-20T17:11:03.730Z",
+    "updated_at": "2026-01-20T17:11:03.730Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 2,
+  "fields": {
+    "cliente": 27,
+    "descripcion": "Crédito para mejoras del hogar",
+    "monto": "875335.55",
+    "pago_minimo": "47133.60",
+    "pago_maximo": "61762.08",
+    "plazo_meses": 19,
+    "fecha_registro": "2026-01-20T17:11:03.767Z",
+    "banco": 11,
+    "tipo_credito": "COMERCIAL",
+    "tasa_interes": "16.95",
+    "cuota_mensual": "52851.22",
+    "monto_total": "1004173.18",
+    "created_at": "2026-01-20T17:11:03.767Z",
+    "updated_at": "2026-01-20T17:11:03.767Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 3,
+  "fields": {
+    "cliente": 34,
+    "descripcion": "Crédito hipotecario para vivienda",
+    "monto": "179620.28",
+    "pago_minimo": "6860.66",
+    "pago_maximo": "8880.57",
+    "plazo_meses": 28,
+    "fecha_registro": "2026-01-20T17:11:03.778Z",
+    "banco": 9,
+    "tipo_credito": "AUTOMOTRIZ",
+    "tasa_interes": "18.79",
+    "cuota_mensual": "7973.02",
+    "monto_total": "223244.56",
+    "created_at": "2026-01-20T17:11:03.778Z",
+    "updated_at": "2026-01-20T17:11:03.778Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 4,
+  "fields": {
+    "cliente": 20,
+    "descripcion": "Crédito comercial para negocio",
+    "monto": "990329.82",
+    "pago_minimo": "53912.29",
+    "pago_maximo": "70926.03",
+    "plazo_meses": 19,
+    "fecha_registro": "2026-01-20T17:11:03.785Z",
+    "banco": 12,
+    "tipo_credito": "AUTOMOTRIZ",
+    "tasa_interes": "20.20",
+    "cuota_mensual": "61335.26",
+    "monto_total": "1165369.94",
+    "created_at": "2026-01-20T17:11:03.785Z",
+    "updated_at": "2026-01-20T17:11:03.785Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 5,
+  "fields": {
+    "cliente": 6,
+    "descripcion": "Crédito hipotecario para vivienda",
+    "monto": "925443.72",
+    "pago_minimo": "68272.34",
+    "pago_maximo": "93637.17",
+    "plazo_meses": 12,
+    "fecha_registro": "2026-01-20T17:11:03.790Z",
+    "banco": 12,
+    "tipo_credito": "HIPOTECARIO",
+    "tasa_interes": "9.80",
+    "cuota_mensual": "81275.15",
+    "monto_total": "975301.80",
+    "created_at": "2026-01-20T17:11:03.790Z",
+    "updated_at": "2026-01-20T17:11:03.790Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 6,
+  "fields": {
+    "cliente": 3,
+    "descripcion": "Crédito para compra de vehículo",
+    "monto": "695495.48",
+    "pago_minimo": "33113.68",
+    "pago_maximo": "45015.28",
+    "plazo_meses": 21,
+    "fecha_registro": "2026-01-20T17:11:03.797Z",
+    "banco": 7,
+    "tipo_credito": "COMERCIAL",
+    "tasa_interes": "22.43",
+    "cuota_mensual": "40347.64",
+    "monto_total": "847300.44",
+    "created_at": "2026-01-20T17:11:03.797Z",
+    "updated_at": "2026-01-20T17:11:03.797Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 7,
+  "fields": {
+    "cliente": 7,
+    "descripcion": "Crédito hipotecario para vivienda",
+    "monto": "585723.16",
+    "pago_minimo": "21107.11",
+    "pago_maximo": "29659.17",
+    "plazo_meses": 31,
+    "fecha_registro": "2026-01-20T17:11:03.803Z",
+    "banco": 12,
+    "tipo_credito": "COMERCIAL",
+    "tasa_interes": "24.06",
+    "cuota_mensual": "25553.45",
+    "monto_total": "792156.95",
+    "created_at": "2026-01-20T17:11:03.803Z",
+    "updated_at": "2026-01-20T17:11:03.803Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 8,
+  "fields": {
+    "cliente": 8,
+    "descripcion": "Crédito hipotecario para vivienda",
+    "monto": "564779.61",
+    "pago_minimo": "18508.20",
+    "pago_maximo": "26182.91",
+    "plazo_meses": 30,
+    "fecha_registro": "2026-01-20T17:11:03.809Z",
+    "banco": 5,
+    "tipo_credito": "AUTOMOTRIZ",
+    "tasa_interes": "15.05",
+    "cuota_mensual": "22705.63",
+    "monto_total": "681168.90",
+    "created_at": "2026-01-20T17:11:03.809Z",
+    "updated_at": "2026-01-20T17:11:03.809Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 9,
+  "fields": {
+    "cliente": 16,
+    "descripcion": "Crédito para mejoras del hogar",
+    "monto": "1430960.40",
+    "pago_minimo": "48100.86",
+    "pago_maximo": "65271.51",
+    "plazo_meses": 30,
+    "fecha_registro": "2026-01-20T17:11:03.814Z",
+    "banco": 7,
+    "tipo_credito": "AUTOMOTRIZ",
+    "tasa_interes": "17.12",
+    "cuota_mensual": "58966.47",
+    "monto_total": "1768994.10",
+    "created_at": "2026-01-20T17:11:03.814Z",
+    "updated_at": "2026-01-20T17:11:03.814Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 10,
+  "fields": {
+    "cliente": 14,
+    "descripcion": "Crédito para mejoras del hogar",
+    "monto": "923626.60",
+    "pago_minimo": "30428.67",
+    "pago_maximo": "41847.26",
+    "plazo_meses": 30,
+    "fecha_registro": "2026-01-20T17:11:03.819Z",
+    "banco": 1,
+    "tipo_credito": "COMERCIAL",
+    "tasa_interes": "15.66",
+    "cuota_mensual": "37404.39",
+    "monto_total": "1122131.70",
+    "created_at": "2026-01-20T17:11:03.819Z",
+    "updated_at": "2026-01-20T17:11:03.819Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 11,
+  "fields": {
+    "cliente": 13,
+    "descripcion": "Crédito hipotecario para vivienda",
+    "monto": "357438.13",
+    "pago_minimo": "28229.33",
+    "pago_maximo": "37631.71",
+    "plazo_meses": 12,
+    "fecha_registro": "2026-01-20T17:11:03.824Z",
+    "banco": 8,
+    "tipo_credito": "AUTOMOTRIZ",
+    "tasa_interes": "21.13",
+    "cuota_mensual": "33304.72",
+    "monto_total": "399656.64",
+    "created_at": "2026-01-20T17:11:03.824Z",
+    "updated_at": "2026-01-20T17:11:03.824Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 12,
+  "fields": {
+    "cliente": 28,
+    "descripcion": "Crédito personal",
+    "monto": "878861.88",
+    "pago_minimo": "20066.83",
+    "pago_maximo": "27896.77",
+    "plazo_meses": 47,
+    "fecha_registro": "2026-01-20T17:11:03.831Z",
+    "banco": 2,
+    "tipo_credito": "COMERCIAL",
+    "tasa_interes": "15.15",
+    "cuota_mensual": "24906.88",
+    "monto_total": "1170623.36",
+    "created_at": "2026-01-20T17:11:03.831Z",
+    "updated_at": "2026-01-20T17:11:03.831Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 13,
+  "fields": {
+    "cliente": 1,
+    "descripcion": "Crédito hipotecario para vivienda",
+    "monto": "1585964.56",
+    "pago_minimo": "65109.08",
+    "pago_maximo": "90040.30",
+    "plazo_meses": 22,
+    "fecha_registro": "2026-01-20T17:11:03.831Z",
+    "banco": 2,
+    "tipo_credito": "HIPOTECARIO",
+    "tasa_interes": "12.31",
+    "cuota_mensual": "80897.27",
+    "monto_total": "1779739.94",
+    "created_at": "2026-01-20T17:11:03.831Z",
+    "updated_at": "2026-01-20T17:11:03.831Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 14,
+  "fields": {
+    "cliente": 4,
+    "descripcion": "Crédito personal",
+    "monto": "956774.96",
+    "pago_minimo": "108798.03",
+    "pago_maximo": "144886.95",
+    "plazo_meses": 8,
+    "fecha_registro": "2026-01-20T17:11:03.839Z",
+    "banco": 3,
+    "tipo_credito": "AUTOMOTRIZ",
+    "tasa_interes": "12.21",
+    "cuota_mensual": "125137.58",
+    "monto_total": "1001100.64",
+    "created_at": "2026-01-20T17:11:03.839Z",
+    "updated_at": "2026-01-20T17:11:03.839Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 15,
+  "fields": {
+    "cliente": 2,
+    "descripcion": "Crédito para compra de vehículo",
+    "monto": "1619566.36",
+    "pago_minimo": "67958.65",
+    "pago_maximo": "99783.83",
+    "plazo_meses": 22,
+    "fecha_registro": "2026-01-20T17:11:03.847Z",
+    "banco": 7,
+    "tipo_credito": "COMERCIAL",
+    "tasa_interes": "13.18",
+    "cuota_mensual": "83270.20",
+    "monto_total": "1831944.40",
+    "created_at": "2026-01-20T17:11:03.847Z",
+    "updated_at": "2026-01-20T17:11:03.847Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 16,
+  "fields": {
+    "cliente": 31,
+    "descripcion": "Crédito personal",
+    "monto": "1088720.46",
+    "pago_minimo": "27485.07",
+    "pago_maximo": "35982.40",
+    "plazo_meses": 41,
+    "fecha_registro": "2026-01-20T17:11:03.851Z",
+    "banco": 7,
+    "tipo_credito": "HIPOTECARIO",
+    "tasa_interes": "10.89",
+    "cuota_mensual": "31918.80",
+    "monto_total": "1308670.80",
+    "created_at": "2026-01-20T17:11:03.851Z",
+    "updated_at": "2026-01-20T17:11:03.851Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 17,
+  "fields": {
+    "cliente": 24,
+    "descripcion": "Crédito para compra de vehículo",
+    "monto": "375360.46",
+    "pago_minimo": "15579.43",
+    "pago_maximo": "23104.99",
+    "plazo_meses": 24,
+    "fecha_registro": "2026-01-20T17:11:03.855Z",
+    "banco": 9,
+    "tipo_credito": "COMERCIAL",
+    "tasa_interes": "21.16",
+    "cuota_mensual": "19317.65",
+    "monto_total": "463623.60",
+    "created_at": "2026-01-20T17:11:03.855Z",
+    "updated_at": "2026-01-20T17:11:03.855Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 18,
+  "fields": {
+    "cliente": 26,
+    "descripcion": "Crédito para mejoras del hogar",
+    "monto": "395866.77",
+    "pago_minimo": "46689.71",
+    "pago_maximo": "63668.69",
+    "plazo_meses": 8,
+    "fecha_registro": "2026-01-20T17:11:03.863Z",
+    "banco": 8,
+    "tipo_credito": "AUTOMOTRIZ",
+    "tasa_interes": "22.65",
+    "cuota_mensual": "53777.99",
+    "monto_total": "430223.92",
+    "created_at": "2026-01-20T17:11:03.863Z",
+    "updated_at": "2026-01-20T17:11:03.863Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 19,
+  "fields": {
+    "cliente": 25,
+    "descripcion": "Crédito hipotecario para vivienda",
+    "monto": "504589.20",
+    "pago_minimo": "18696.83",
+    "pago_maximo": "26163.78",
+    "plazo_meses": 25,
+    "fecha_registro": "2026-01-20T17:11:03.866Z",
+    "banco": 4,
+    "tipo_credito": "COMERCIAL",
+    "tasa_interes": "10.37",
+    "cuota_mensual": "22529.01",
+    "monto_total": "563225.25",
+    "created_at": "2026-01-20T17:11:03.866Z",
+    "updated_at": "2026-01-20T17:11:03.866Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 20,
+  "fields": {
+    "cliente": 24,
+    "descripcion": "Crédito comercial para negocio",
+    "monto": "939539.84",
+    "pago_minimo": "25624.58",
+    "pago_maximo": "33902.04",
+    "plazo_meses": 48,
+    "fecha_registro": "2026-01-20T17:11:03.872Z",
+    "banco": 12,
+    "tipo_credito": "AUTOMOTRIZ",
+    "tasa_interes": "21.63",
+    "cuota_mensual": "29412.81",
+    "monto_total": "1411814.88",
+    "created_at": "2026-01-20T17:11:03.872Z",
+    "updated_at": "2026-01-20T17:11:03.872Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 21,
+  "fields": {
+    "cliente": 16,
+    "descripcion": "Crédito para compra de vehículo",
+    "monto": "1511824.39",
+    "pago_minimo": "38621.06",
+    "pago_maximo": "53727.09",
+    "plazo_meses": 44,
+    "fecha_registro": "2026-01-20T17:11:03.882Z",
+    "banco": 8,
+    "tipo_credito": "HIPOTECARIO",
+    "tasa_interes": "15.63",
+    "cuota_mensual": "45358.04",
+    "monto_total": "1995753.76",
+    "created_at": "2026-01-20T17:11:03.882Z",
+    "updated_at": "2026-01-20T17:11:03.882Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 22,
+  "fields": {
+    "cliente": 14,
+    "descripcion": "Crédito comercial para negocio",
+    "monto": "911784.15",
+    "pago_minimo": "105995.76",
+    "pago_maximo": "136840.73",
+    "plazo_meses": 8,
+    "fecha_registro": "2026-01-20T17:11:03.887Z",
+    "banco": 12,
+    "tipo_credito": "HIPOTECARIO",
+    "tasa_interes": "23.61",
+    "cuota_mensual": "124293.19",
+    "monto_total": "994345.52",
+    "created_at": "2026-01-20T17:11:03.887Z",
+    "updated_at": "2026-01-20T17:11:03.887Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 23,
+  "fields": {
+    "cliente": 25,
+    "descripcion": "Crédito hipotecario para vivienda",
+    "monto": "1153850.80",
+    "pago_minimo": "66992.02",
+    "pago_maximo": "85127.22",
+    "plazo_meses": 18,
+    "fecha_registro": "2026-01-20T17:11:03.890Z",
+    "banco": 8,
+    "tipo_credito": "COMERCIAL",
+    "tasa_interes": "21.91",
+    "cuota_mensual": "75790.73",
+    "monto_total": "1364233.14",
+    "created_at": "2026-01-20T17:11:03.890Z",
+    "updated_at": "2026-01-20T17:11:03.890Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 24,
+  "fields": {
+    "cliente": 11,
+    "descripcion": "Crédito personal",
+    "monto": "1745604.47",
+    "pago_minimo": "75271.52",
+    "pago_maximo": "100256.92",
+    "plazo_meses": 23,
+    "fecha_registro": "2026-01-20T17:11:03.898Z",
+    "banco": 2,
+    "tipo_credito": "COMERCIAL",
+    "tasa_interes": "14.37",
+    "cuota_mensual": "87277.51",
+    "monto_total": "2007382.73",
+    "created_at": "2026-01-20T17:11:03.898Z",
+    "updated_at": "2026-01-20T17:11:03.898Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 25,
+  "fields": {
+    "cliente": 11,
+    "descripcion": "Crédito para mejoras del hogar",
+    "monto": "775354.03",
+    "pago_minimo": "31727.51",
+    "pago_maximo": "43874.60",
+    "plazo_meses": 22,
+    "fecha_registro": "2026-01-20T17:11:03.907Z",
+    "banco": 6,
+    "tipo_credito": "HIPOTECARIO",
+    "tasa_interes": "10.47",
+    "cuota_mensual": "38887.05",
+    "monto_total": "855515.10",
+    "created_at": "2026-01-20T17:11:03.907Z",
+    "updated_at": "2026-01-20T17:11:03.907Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 26,
+  "fields": {
+    "cliente": 6,
+    "descripcion": "Crédito para mejoras del hogar",
+    "monto": "920629.28",
+    "pago_minimo": "34123.90",
+    "pago_maximo": "44435.46",
+    "plazo_meses": 33,
+    "fecha_registro": "2026-01-20T17:11:03.909Z",
+    "banco": 12,
+    "tipo_credito": "HIPOTECARIO",
+    "tasa_interes": "23.60",
+    "cuota_mensual": "38187.25",
+    "monto_total": "1260179.25",
+    "created_at": "2026-01-20T17:11:03.917Z",
+    "updated_at": "2026-01-20T17:11:03.917Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 27,
+  "fields": {
+    "cliente": 32,
+    "descripcion": "Crédito personal",
+    "monto": "1350690.79",
+    "pago_minimo": "107882.43",
+    "pago_maximo": "142773.97",
+    "plazo_meses": 12,
+    "fecha_registro": "2026-01-20T17:11:03.920Z",
+    "banco": 7,
+    "tipo_credito": "COMERCIAL",
+    "tasa_interes": "12.05",
+    "cuota_mensual": "120038.84",
+    "monto_total": "1440466.08",
+    "created_at": "2026-01-20T17:11:03.920Z",
+    "updated_at": "2026-01-20T17:11:03.920Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 28,
+  "fields": {
+    "cliente": 22,
+    "descripcion": "Crédito para mejoras del hogar",
+    "monto": "29564.15",
+    "pago_minimo": "1605.19",
+    "pago_maximo": "2315.68",
+    "plazo_meses": 17,
+    "fecha_registro": "2026-01-20T17:11:03.931Z",
+    "banco": 2,
+    "tipo_credito": "HIPOTECARIO",
+    "tasa_interes": "14.44",
+    "cuota_mensual": "1933.41",
+    "monto_total": "32867.97",
+    "created_at": "2026-01-20T17:11:03.931Z",
+    "updated_at": "2026-01-20T17:11:03.931Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 29,
+  "fields": {
+    "cliente": 2,
+    "descripcion": "Crédito personal",
+    "monto": "204785.73",
+    "pago_minimo": "4517.10",
+    "pago_maximo": "6195.03",
+    "plazo_meses": 51,
+    "fecha_registro": "2026-01-20T17:11:03.935Z",
+    "banco": 10,
+    "tipo_credito": "COMERCIAL",
+    "tasa_interes": "14.52",
+    "cuota_mensual": "5404.48",
+    "monto_total": "275628.48",
+    "created_at": "2026-01-20T17:11:03.935Z",
+    "updated_at": "2026-01-20T17:11:03.935Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 30,
+  "fields": {
+    "cliente": 27,
+    "descripcion": "Crédito para mejoras del hogar",
+    "monto": "125387.12",
+    "pago_minimo": "4610.96",
+    "pago_maximo": "6180.51",
+    "plazo_meses": 27,
+    "fecha_registro": "2026-01-20T17:11:03.939Z",
+    "banco": 5,
+    "tipo_credito": "HIPOTECARIO",
+    "tasa_interes": "14.20",
+    "cuota_mensual": "5452.47",
+    "monto_total": "147216.69",
+    "created_at": "2026-01-20T17:11:03.939Z",
+    "updated_at": "2026-01-20T17:11:03.939Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 31,
+  "fields": {
+    "cliente": 22,
+    "descripcion": "Crédito comercial para negocio",
+    "monto": "586077.11",
+    "pago_minimo": "28936.10",
+    "pago_maximo": "38292.40",
+    "plazo_meses": 21,
+    "fecha_registro": "2026-01-20T17:11:03.948Z",
+    "banco": 12,
+    "tipo_credito": "COMERCIAL",
+    "tasa_interes": "23.04",
+    "cuota_mensual": "34175.36",
+    "monto_total": "717682.56",
+    "created_at": "2026-01-20T17:11:03.948Z",
+    "updated_at": "2026-01-20T17:11:03.948Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 32,
+  "fields": {
+    "cliente": 26,
+    "descripcion": "Crédito para mejoras del hogar",
+    "monto": "723043.30",
+    "pago_minimo": "19087.17",
+    "pago_maximo": "26216.22",
+    "plazo_meses": 38,
+    "fecha_registro": "2026-01-20T17:11:03.952Z",
+    "banco": 1,
+    "tipo_credito": "HIPOTECARIO",
+    "tasa_interes": "10.90",
+    "cuota_mensual": "22585.25",
+    "monto_total": "858239.50",
+    "created_at": "2026-01-20T17:11:03.952Z",
+    "updated_at": "2026-01-20T17:11:03.952Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 33,
+  "fields": {
+    "cliente": 12,
+    "descripcion": "Crédito hipotecario para vivienda",
+    "monto": "685216.08",
+    "pago_minimo": "47160.90",
+    "pago_maximo": "62853.73",
+    "plazo_meses": 14,
+    "fecha_registro": "2026-01-20T17:11:03.959Z",
+    "banco": 1,
+    "tipo_credito": "COMERCIAL",
+    "tasa_interes": "18.45",
+    "cuota_mensual": "54774.30",
+    "monto_total": "766840.20",
+    "created_at": "2026-01-20T17:11:03.959Z",
+    "updated_at": "2026-01-20T17:11:03.959Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 34,
+  "fields": {
+    "cliente": 28,
+    "descripcion": "Crédito personal",
+    "monto": "640239.42",
+    "pago_minimo": "23580.29",
+    "pago_maximo": "33904.62",
+    "plazo_meses": 26,
+    "fecha_registro": "2026-01-20T17:11:03.965Z",
+    "banco": 3,
+    "tipo_credito": "AUTOMOTRIZ",
+    "tasa_interes": "12.86",
+    "cuota_mensual": "28345.19",
+    "monto_total": "736974.94",
+    "created_at": "2026-01-20T17:11:03.965Z",
+    "updated_at": "2026-01-20T17:11:03.965Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 35,
+  "fields": {
+    "cliente": 17,
+    "descripcion": "Crédito para mejoras del hogar",
+    "monto": "57120.09",
+    "pago_minimo": "2536.27",
+    "pago_maximo": "3436.65",
+    "plazo_meses": 22,
+    "fecha_registro": "2026-01-20T17:11:03.970Z",
+    "banco": 10,
+    "tipo_credito": "COMERCIAL",
+    "tasa_interes": "14.13",
+    "cuota_mensual": "2962.34",
+    "monto_total": "65171.48",
+    "created_at": "2026-01-20T17:11:03.970Z",
+    "updated_at": "2026-01-20T17:11:03.970Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 36,
+  "fields": {
+    "cliente": 33,
+    "descripcion": "Crédito para mejoras del hogar",
+    "monto": "627267.23",
+    "pago_minimo": "16639.03",
+    "pago_maximo": "22807.16",
+    "plazo_meses": 49,
+    "fecha_registro": "2026-01-20T17:11:03.974Z",
+    "banco": 12,
+    "tipo_credito": "AUTOMOTRIZ",
+    "tasa_interes": "23.23",
+    "cuota_mensual": "19933.29",
+    "monto_total": "976731.21",
+    "created_at": "2026-01-20T17:11:03.974Z",
+    "updated_at": "2026-01-20T17:11:03.974Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 37,
+  "fields": {
+    "cliente": 26,
+    "descripcion": "Crédito comercial para negocio",
+    "monto": "632672.57",
+    "pago_minimo": "17748.39",
+    "pago_maximo": "23782.46",
+    "plazo_meses": 36,
+    "fecha_registro": "2026-01-20T17:11:03.984Z",
+    "banco": 5,
+    "tipo_credito": "COMERCIAL",
+    "tasa_interes": "11.71",
+    "cuota_mensual": "20926.26",
+    "monto_total": "753345.36",
+    "created_at": "2026-01-20T17:11:03.984Z",
+    "updated_at": "2026-01-20T17:11:03.984Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 38,
+  "fields": {
+    "cliente": 28,
+    "descripcion": "Crédito comercial para negocio",
+    "monto": "1384421.78",
+    "pago_minimo": "41848.79",
+    "pago_maximo": "58271.64",
+    "plazo_meses": 37,
+    "fecha_registro": "2026-01-20T17:11:03.989Z",
+    "banco": 8,
+    "tipo_credito": "HIPOTECARIO",
+    "tasa_interes": "22.00",
+    "cuota_mensual": "51860.44",
+    "monto_total": "1918836.28",
+    "created_at": "2026-01-20T17:11:03.989Z",
+    "updated_at": "2026-01-20T17:11:03.989Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 39,
+  "fields": {
+    "cliente": 26,
+    "descripcion": "Crédito hipotecario para vivienda",
+    "monto": "1281312.44",
+    "pago_minimo": "63445.35",
+    "pago_maximo": "84575.81",
+    "plazo_meses": 21,
+    "fecha_registro": "2026-01-20T17:11:03.993Z",
+    "banco": 1,
+    "tipo_credito": "HIPOTECARIO",
+    "tasa_interes": "16.79",
+    "cuota_mensual": "70839.90",
+    "monto_total": "1487637.90",
+    "created_at": "2026-01-20T17:11:03.993Z",
+    "updated_at": "2026-01-20T17:11:03.993Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 40,
+  "fields": {
+    "cliente": 20,
+    "descripcion": "Crédito personal",
+    "monto": "468890.52",
+    "pago_minimo": "16358.65",
+    "pago_maximo": "21105.06",
+    "plazo_meses": 35,
+    "fecha_registro": "2026-01-20T17:11:04.001Z",
+    "banco": 12,
+    "tipo_credito": "COMERCIAL",
+    "tasa_interes": "22.83",
+    "cuota_mensual": "18471.06",
+    "monto_total": "646487.10",
+    "created_at": "2026-01-20T17:11:04.001Z",
+    "updated_at": "2026-01-20T17:11:04.001Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 41,
+  "fields": {
+    "cliente": 35,
+    "descripcion": "Crédito para mejoras del hogar",
+    "monto": "465083.78",
+    "pago_minimo": "34444.92",
+    "pago_maximo": "50142.14",
+    "plazo_meses": 12,
+    "fecha_registro": "2026-01-20T17:11:04.006Z",
+    "banco": 5,
+    "tipo_credito": "COMERCIAL",
+    "tasa_interes": "15.68",
+    "cuota_mensual": "42127.05",
+    "monto_total": "505524.60",
+    "created_at": "2026-01-20T17:11:04.006Z",
+    "updated_at": "2026-01-20T17:11:04.006Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 42,
+  "fields": {
+    "cliente": 35,
+    "descripcion": "Crédito para compra de vehículo",
+    "monto": "167293.90",
+    "pago_minimo": "10428.05",
+    "pago_maximo": "13697.96",
+    "plazo_meses": 15,
+    "fecha_registro": "2026-01-20T17:11:04.007Z",
+    "banco": 9,
+    "tipo_credito": "HIPOTECARIO",
+    "tasa_interes": "11.36",
+    "cuota_mensual": "12016.14",
+    "monto_total": "180242.10",
+    "created_at": "2026-01-20T17:11:04.007Z",
+    "updated_at": "2026-01-20T17:11:04.007Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 43,
+  "fields": {
+    "cliente": 34,
+    "descripcion": "Crédito personal",
+    "monto": "1011931.21",
+    "pago_minimo": "32572.57",
+    "pago_maximo": "44344.51",
+    "plazo_meses": 32,
+    "fecha_registro": "2026-01-20T17:11:04.017Z",
+    "banco": 11,
+    "tipo_credito": "AUTOMOTRIZ",
+    "tasa_interes": "16.65",
+    "cuota_mensual": "39376.27",
+    "monto_total": "1260040.64",
+    "created_at": "2026-01-20T17:11:04.017Z",
+    "updated_at": "2026-01-20T17:11:04.017Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 44,
+  "fields": {
+    "cliente": 25,
+    "descripcion": "Crédito para mejoras del hogar",
+    "monto": "626218.56",
+    "pago_minimo": "21923.62",
+    "pago_maximo": "29015.70",
+    "plazo_meses": 33,
+    "fecha_registro": "2026-01-20T17:11:04.022Z",
+    "banco": 9,
+    "tipo_credito": "HIPOTECARIO",
+    "tasa_interes": "20.82",
+    "cuota_mensual": "25084.12",
+    "monto_total": "827775.96",
+    "created_at": "2026-01-20T17:11:04.022Z",
+    "updated_at": "2026-01-20T17:11:04.022Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 45,
+  "fields": {
+    "cliente": 9,
+    "descripcion": "Crédito para compra de vehículo",
+    "monto": "789546.63",
+    "pago_minimo": "56226.68",
+    "pago_maximo": "78470.24",
+    "plazo_meses": 12,
+    "fecha_registro": "2026-01-20T17:11:04.029Z",
+    "banco": 6,
+    "tipo_credito": "HIPOTECARIO",
+    "tasa_interes": "8.62",
+    "cuota_mensual": "68907.96",
+    "monto_total": "826895.52",
+    "created_at": "2026-01-20T17:11:04.029Z",
+    "updated_at": "2026-01-20T17:11:04.029Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 46,
+  "fields": {
+    "cliente": 9,
+    "descripcion": "Crédito personal",
+    "monto": "1197907.53",
+    "pago_minimo": "40451.77",
+    "pago_maximo": "54064.12",
+    "plazo_meses": 30,
+    "fecha_registro": "2026-01-20T17:11:04.033Z",
+    "banco": 3,
+    "tipo_credito": "AUTOMOTRIZ",
+    "tasa_interes": "12.76",
+    "cuota_mensual": "46847.31",
+    "monto_total": "1405419.30",
+    "created_at": "2026-01-20T17:11:04.033Z",
+    "updated_at": "2026-01-20T17:11:04.033Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 47,
+  "fields": {
+    "cliente": 30,
+    "descripcion": "Crédito para compra de vehículo",
+    "monto": "74081.30",
+    "pago_minimo": "4536.76",
+    "pago_maximo": "6349.37",
+    "plazo_meses": 15,
+    "fecha_registro": "2026-01-20T17:11:04.040Z",
+    "banco": 9,
+    "tipo_credito": "HIPOTECARIO",
+    "tasa_interes": "16.30",
+    "cuota_mensual": "5492.31",
+    "monto_total": "82384.65",
+    "created_at": "2026-01-20T17:11:04.040Z",
+    "updated_at": "2026-01-20T17:11:04.040Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 48,
+  "fields": {
+    "cliente": 17,
+    "descripcion": "Crédito para compra de vehículo",
+    "monto": "249841.92",
+    "pago_minimo": "9918.77",
+    "pago_maximo": "13189.73",
+    "plazo_meses": 25,
+    "fecha_registro": "2026-01-20T17:11:04.048Z",
+    "banco": 4,
+    "tipo_credito": "AUTOMOTRIZ",
+    "tasa_interes": "11.39",
+    "cuota_mensual": "11273.37",
+    "monto_total": "281834.25",
+    "created_at": "2026-01-20T17:11:04.048Z",
+    "updated_at": "2026-01-20T17:11:04.048Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 49,
+  "fields": {
+    "cliente": 30,
+    "descripcion": "Crédito para compra de vehículo",
+    "monto": "1030646.62",
+    "pago_minimo": "30075.97",
+    "pago_maximo": "42460.52",
+    "plazo_meses": 31,
+    "fecha_registro": "2026-01-20T17:11:04.053Z",
+    "banco": 6,
+    "tipo_credito": "AUTOMOTRIZ",
+    "tasa_interes": "8.86",
+    "cuota_mensual": "37318.54",
+    "monto_total": "1156874.74",
+    "created_at": "2026-01-20T17:11:04.053Z",
+    "updated_at": "2026-01-20T17:11:04.053Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 50,
+  "fields": {
+    "cliente": 9,
+    "descripcion": "Crédito para mejoras del hogar",
+    "monto": "335367.99",
+    "pago_minimo": "8802.60",
+    "pago_maximo": "11051.83",
+    "plazo_meses": 40,
+    "fecha_registro": "2026-01-20T17:11:04.053Z",
+    "banco": 4,
+    "tipo_credito": "AUTOMOTRIZ",
+    "tasa_interes": "9.85",
+    "cuota_mensual": "9869.85",
+    "monto_total": "394794.00",
+    "created_at": "2026-01-20T17:11:04.053Z",
+    "updated_at": "2026-01-20T17:11:04.053Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 51,
+  "fields": {
+    "cliente": 6,
+    "descripcion": "Crédito para mejoras del hogar",
+    "monto": "968324.95",
+    "pago_minimo": "28993.28",
+    "pago_maximo": "37233.45",
+    "plazo_meses": 34,
+    "fecha_registro": "2026-01-20T17:11:04.064Z",
+    "banco": 1,
+    "tipo_credito": "AUTOMOTRIZ",
+    "tasa_interes": "10.62",
+    "cuota_mensual": "33104.44",
+    "monto_total": "1125550.96",
+    "created_at": "2026-01-20T17:11:04.064Z",
+    "updated_at": "2026-01-20T17:11:04.064Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 52,
+  "fields": {
+    "cliente": 26,
+    "descripcion": "Crédito para mejoras del hogar",
+    "monto": "196192.42",
+    "pago_minimo": "5889.43",
+    "pago_maximo": "8085.81",
+    "plazo_meses": 32,
+    "fecha_registro": "2026-01-20T17:11:04.067Z",
+    "banco": 6,
+    "tipo_credito": "COMERCIAL",
+    "tasa_interes": "11.43",
+    "cuota_mensual": "7141.70",
+    "monto_total": "228534.40",
+    "created_at": "2026-01-20T17:11:04.067Z",
+    "updated_at": "2026-01-20T17:11:04.067Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 53,
+  "fields": {
+    "cliente": 1,
+    "descripcion": "Crédito personal",
+    "monto": "1609117.20",
+    "pago_minimo": "82750.32",
+    "pago_maximo": "106986.21",
+    "plazo_meses": 21,
+    "fecha_registro": "2026-01-20T17:11:04.072Z",
+    "banco": 7,
+    "tipo_credito": "COMERCIAL",
+    "tasa_interes": "21.81",
+    "cuota_mensual": "92861.37",
+    "monto_total": "1950088.77",
+    "created_at": "2026-01-20T17:11:04.072Z",
+    "updated_at": "2026-01-20T17:11:04.072Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 54,
+  "fields": {
+    "cliente": 22,
+    "descripcion": "Crédito para compra de vehículo",
+    "monto": "1239635.70",
+    "pago_minimo": "63307.08",
+    "pago_maximo": "87148.39",
+    "plazo_meses": 19,
+    "fecha_registro": "2026-01-20T17:11:04.081Z",
+    "banco": 6,
+    "tipo_credito": "HIPOTECARIO",
+    "tasa_interes": "13.43",
+    "cuota_mensual": "72789.49",
+    "monto_total": "1383000.31",
+    "created_at": "2026-01-20T17:11:04.081Z",
+    "updated_at": "2026-01-20T17:11:04.081Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 55,
+  "fields": {
+    "cliente": 21,
+    "descripcion": "Crédito para mejoras del hogar",
+    "monto": "1539407.08",
+    "pago_minimo": "159299.72",
+    "pago_maximo": "210436.70",
+    "plazo_meses": 9,
+    "fecha_registro": "2026-01-20T17:11:04.085Z",
+    "banco": 8,
+    "tipo_credito": "AUTOMOTRIZ",
+    "tasa_interes": "14.74",
+    "cuota_mensual": "181721.23",
+    "monto_total": "1635491.07",
+    "created_at": "2026-01-20T17:11:04.085Z",
+    "updated_at": "2026-01-20T17:11:04.085Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 56,
+  "fields": {
+    "cliente": 29,
+    "descripcion": "Crédito comercial para negocio",
+    "monto": "462183.04",
+    "pago_minimo": "12167.51",
+    "pago_maximo": "16328.94",
+    "plazo_meses": 40,
+    "fecha_registro": "2026-01-20T17:11:04.088Z",
+    "banco": 12,
+    "tipo_credito": "AUTOMOTRIZ",
+    "tasa_interes": "11.95",
+    "cuota_mensual": "14064.93",
+    "monto_total": "562597.20",
+    "created_at": "2026-01-20T17:11:04.088Z",
+    "updated_at": "2026-01-20T17:11:04.088Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 57,
+  "fields": {
+    "cliente": 6,
+    "descripcion": "Crédito para compra de vehículo",
+    "monto": "53463.71",
+    "pago_minimo": "1804.57",
+    "pago_maximo": "2388.31",
+    "plazo_meses": 30,
+    "fecha_registro": "2026-01-20T17:11:04.097Z",
+    "banco": 6,
+    "tipo_credito": "AUTOMOTRIZ",
+    "tasa_interes": "13.43",
+    "cuota_mensual": "2107.87",
+    "monto_total": "63236.10",
+    "created_at": "2026-01-20T17:11:04.097Z",
+    "updated_at": "2026-01-20T17:11:04.097Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 58,
+  "fields": {
+    "cliente": 21,
+    "descripcion": "Crédito personal",
+    "monto": "947353.16",
+    "pago_minimo": "23316.16",
+    "pago_maximo": "32438.49",
+    "plazo_meses": 48,
+    "fecha_registro": "2026-01-20T17:11:04.101Z",
+    "banco": 12,
+    "tipo_credito": "COMERCIAL",
+    "tasa_interes": "18.27",
+    "cuota_mensual": "27962.34",
+    "monto_total": "1342192.32",
+    "created_at": "2026-01-20T17:11:04.101Z",
+    "updated_at": "2026-01-20T17:11:04.101Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 59,
+  "fields": {
+    "cliente": 19,
+    "descripcion": "Crédito para compra de vehículo",
+    "monto": "217130.21",
+    "pago_minimo": "11414.60",
+    "pago_maximo": "15169.87",
+    "plazo_meses": 18,
+    "fecha_registro": "2026-01-20T17:11:04.101Z",
+    "banco": 1,
+    "tipo_credito": "AUTOMOTRIZ",
+    "tasa_interes": "16.46",
+    "cuota_mensual": "13695.28",
+    "monto_total": "246515.04",
+    "created_at": "2026-01-20T17:11:04.101Z",
+    "updated_at": "2026-01-20T17:11:04.101Z"
+  }
+},
+{
+  "model": "creditos.credito",
+  "pk": 60,
+  "fields": {
+    "cliente": 19,
+    "descripcion": "Crédito comercial para negocio",
+    "monto": "1177236.66",
+    "pago_minimo": "38732.65",
+    "pago_maximo": "51967.98",
+    "plazo_meses": 30,
+    "fecha_registro": "2026-01-20T17:11:04.113Z",
+    "banco": 4,
+    "tipo_credito": "COMERCIAL",
+    "tasa_interes": "11.08",
+    "cuota_mensual": "45106.46",
+    "monto_total": "1353193.80",
+    "created_at": "2026-01-20T17:11:04.113Z",
+    "updated_at": "2026-01-20T17:11:04.113Z"
+  }
+}
+]

@@ -470,7 +470,42 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'tu_credito.settings.dev')  # o 
 
 ### Autenticación JWT
 
-1. **Obtener tokens de acceso**
+#### 1. Registro de Usuario (Solo Superusuarios)
+```bash
+POST /api/auth/register/
+Authorization: Bearer <token_de_superusuario>
+Content-Type: application/json
+
+{
+    "username": "nuevo_usuario",
+    "password": "contraseña_segura",
+    "password_confirm": "contraseña_segura",
+    "email": "usuario@example.com",
+    "first_name": "Nombre",
+    "last_name": "Apellido"
+}
+
+Response:
+{
+    "message": "Usuario creado exitosamente",
+    "user": {
+        "id": 1,
+        "username": "nuevo_usuario",
+        "email": "usuario@example.com",
+        "first_name": "Nombre",
+        "last_name": "Apellido",
+        "is_staff": false,
+        "is_superuser": false
+    }
+}
+```
+
+**Nota sobre seguridad:**
+- Las contraseñas se hashean automáticamente por Django antes de guardar en la BD
+- Las credenciales viajan encriptadas por HTTPS (en producción)
+- El endpoint de registro está disponible públicamente. En producción, considera restringirlo o agregar validaciones adicionales (captcha, rate limiting, etc.)
+
+#### 2. Obtener tokens de acceso (Login)
 ```bash
 POST /api/auth/token/
 Content-Type: application/json
@@ -487,13 +522,31 @@ Response:
 }
 ```
 
-2. **Usar token en requests**
+#### 3. Usar token en requests**
 ```bash
 GET /api/bancos/
 Authorization: Bearer <token_de_acceso>
 ```
 
-3. **Refrescar token**
+#### 4. Obtener información del usuario actual
+```bash
+GET /api/auth/me/
+Authorization: Bearer <token_de_acceso>
+
+Response:
+{
+    "id": 1,
+    "username": "admin",
+    "email": "admin@example.com",
+    "first_name": "Admin",
+    "last_name": "User",
+    "is_staff": true,
+    "is_superuser": true,
+    "date_joined": "2024-01-01T00:00:00Z"
+}
+```
+
+#### 5. Refrescar token
 ```bash
 POST /api/auth/token/refresh/
 Content-Type: application/json
@@ -504,6 +557,12 @@ Content-Type: application/json
 ```
 
 ### Endpoints Disponibles
+
+#### Autenticación
+- `POST /api/auth/register/` - Registrar nuevo usuario (requiere autenticación y ser superusuario)
+- `POST /api/auth/token/` - Obtener tokens JWT (no requiere autenticación)
+- `POST /api/auth/token/refresh/` - Refrescar token de acceso (no requiere autenticación)
+- `GET /api/auth/me/` - Obtener información del usuario actual (requiere autenticación)
 
 #### Bancos
 - `GET /api/bancos/` - Listar bancos (filtros: nombre, tipo)
