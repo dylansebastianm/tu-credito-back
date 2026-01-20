@@ -1,0 +1,3 @@
+# Este archivo mantiene el directorio fixtures/ en el repositorio
+# Los archivos *_data.json deben ser agregados manualmente si quieres
+# cargar datos iniciales en producción

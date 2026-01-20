@@ -1,10 +1,10 @@
 @echo off
-REM Script para ejecutar migraciones de Django en Windows
+REM Script para crear y ejecutar migraciones de Django en Windows
 REM Uso: migrate.bat [app_name]
 REM Si no se especifica app_name, ejecuta todas las migraciones
 
 echo ========================================
-echo Ejecutando migraciones de Django
+echo Creando y ejecutando migraciones de Django
 echo ========================================
 echo.
 
@@ -18,19 +18,19 @@ if exist "venv\Scripts\activate.bat" (
 )
 
 echo.
-echo Ejecutando migraciones...
+echo Ejecutando migraciones (crea y aplica automáticamente)...
 echo.
 
 if "%1"=="" (
-    python manage.py migrate
+    python manage.py migrate_auto
 ) else (
-    python manage.py migrate %1
+    python manage.py migrate_auto %1
 )
 
 if %ERRORLEVEL% EQU 0 (
     echo.
     echo ========================================
-    echo Migraciones ejecutadas exitosamente!
+    echo Migraciones creadas y aplicadas exitosamente!
     echo ========================================
 ) else (
     echo.

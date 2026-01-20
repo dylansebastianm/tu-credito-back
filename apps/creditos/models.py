@@ -27,6 +27,12 @@ class Credito(models.Model):
         max_length=500,
         help_text="Descripción del crédito"
     )
+    monto = models.DecimalField(
+        max_digits=12,
+        decimal_places=2,
+        validators=[MinValueValidator(Decimal('0.01'))],
+        help_text="Monto total del crédito (importe otorgado)"
+    )
     pago_minimo = models.DecimalField(
         max_digits=10,
         decimal_places=2,
@@ -101,16 +107,16 @@ class Credito(models.Model):
         """
         Calcula la cuota mensual usando la fórmula de amortización.
         Fórmula: P * (r * (1 + r)^n) / ((1 + r)^n - 1)
-        donde P = monto (pago_maximo), r = tasa mensual, n = plazo en meses
+        donde P = monto (importe total del crédito), r = tasa mensual, n = plazo en meses
         """
         from decimal import Decimal
         from math import pow
         
-        if not self.pago_maximo or not self.plazo_meses or not self.tasa_interes:
+        if not self.monto or not self.plazo_meses or not self.tasa_interes:
             return None
         
         # Convertir a float para cálculos matemáticos
-        monto = float(self.pago_maximo)
+        monto = float(self.monto)
         tasa_anual = float(self.tasa_interes)
         plazo = self.plazo_meses
         

@@ -219,37 +219,69 @@ python manage.py createsuperuser
 
 7. **Actualizar base de datos (Cuando hay cambios en modelos)**
 
-Cada vez que se agreguen o modifiquen modelos, ejecuta las migraciones:
+Cada vez que se agreguen o modifiquen modelos, ejecuta las migraciones. Tanto el comando personalizado como los scripts automáticamente:
+1. Crea los archivos de migración (`makemigrations`)
+2. Aplica las migraciones a la base de datos (`migrate`)
+
+### Opción 1: Usar comando de Django (Recomendado - Funciona en todos los sistemas)
+
+**Migrar TODOS los modelos:**
+```bash
+cd back
+# Activar entorno virtual primero
+# Windows: venv\Scripts\activate
+# Linux/Mac: source venv/bin/activate
+
+# Comando personalizado (crea migraciones + aplica)
+python manage.py migrate_auto
+
+# O comando original de Django (solo aplica migraciones existentes)
+python manage.py migrate
+```
+
+**Migrar un modelo específico (ejemplo: `bancos`):**
+```bash
+cd back
+# Comando personalizado (crea migraciones + aplica)
+python manage.py migrate_auto bancos
+
+# O comando original de Django (solo aplica migraciones existentes)
+python manage.py migrate bancos
+```
+
+### Opción 2: Usar scripts (Windows/Linux/Mac)
 
 **Windows:**
 ```bash
 cd back
-scripts\migrate.bat
+scripts\migrate.bat          # Para todos los modelos
+scripts\migrate.bat bancos   # Para un modelo específico
 ```
 
 **Linux/Mac:**
 ```bash
 cd back
-chmod +x scripts/migrate.sh
-./scripts/migrate.sh
+chmod +x scripts/migrate.sh  # Solo la primera vez
+./scripts/migrate.sh          # Para todos los modelos
+./scripts/migrate.sh bancos   # Para un modelo específico
 ```
 
-**O manualmente:**
+### Opción 3: Comandos manuales (sin automatización)
+
+Si prefieres ejecutar los comandos por separado:
+
 ```bash
 # Activar entorno virtual primero
-python manage.py migrate
-```
+# Windows: venv\Scripts\activate
+# Linux/Mac: source venv/bin/activate
 
-**Para migrar una app específica:**
-```bash
-# Windows
-scripts\migrate.bat creditos
+# Paso 1: Crear migraciones
+python manage.py makemigrations          # Para todos los modelos
+python manage.py makemigrations bancos  # Para un modelo específico
 
-# Linux/Mac
-./scripts/migrate.sh creditos
-
-# O manualmente
-python manage.py migrate creditos
+# Paso 2: Aplicar migraciones
+python manage.py migrate                 # Para todos los modelos
+python manage.py migrate bancos          # Para un modelo específico
 ```
 
 **Nota importante sobre datos existentes:**
@@ -258,12 +290,90 @@ python manage.py migrate creditos
 - ✅ Los campos nuevos con `default` se llenan automáticamente
 - ✅ Los campos `null=True` quedan en NULL hasta que se calculen/actualicen
 
-8. **Crear superusuario (opcional, solo para Django Admin interno)**
+8. **Crear datos de prueba masivamente (para desarrollo local)**
+
+Para crear datos de prueba y poder probar la aplicación con información realista:
+
+```bash
+# Crear datos por defecto (12 bancos, 35 clientes, 60 créditos)
+python manage.py create_sample_data
+
+# Personalizar cantidades
+python manage.py create_sample_data --count-bancos 20 --count-clientes 50 --count-creditos 100
+
+# Limpiar datos existentes y crear nuevos
+python manage.py create_sample_data --clear
+```
+
+**Opciones disponibles:**
+- `--count-bancos N`: Número de bancos a crear (default: 12)
+- `--count-clientes N`: Número de clientes a crear (default: 35)
+- `--count-creditos N`: Número de créditos a crear (default: 60)
+- `--clear`: Eliminar todos los datos existentes antes de crear nuevos
+
+**Nota**: Los datos creados tienen relaciones válidas (clientes asociados a bancos, créditos asociados a clientes y bancos), y respetan los rangos configurados en cada banco (montos, plazos, tasas de interés).
+
+9. **Exportar y cargar datos (para despliegue en producción)**
+
+**Exportar datos de desarrollo local:**
+```bash
+# Exportar todos los datos a fixtures
+python manage.py export_data
+
+# Exportar solo una app específica
+python manage.py export_data bancos
+```
+
+Esto creará archivos JSON en el directorio `fixtures/` con todos los datos de tu base de datos local.
+
+**Cargar datos en producción (Render, etc.):**
+```bash
+# Cargar todos los fixtures disponibles
+python manage.py seed_data
+
+# O cargar fixtures específicos
+python manage.py loaddata fixtures/bancos_data.json
+python manage.py loaddata fixtures/clientes_data.json
+python manage.py loaddata fixtures/creditos_data.json
+```
+
+**⚠️ Importante para despliegue en Render:**
+1. **Desarrollo local**: Crea tus datos de prueba (bancos, clientes, créditos)
+2. **Exporta los datos**: `python manage.py export_data`
+3. **Sube los fixtures al repositorio**: Los archivos en `fixtures/` deben estar en tu repo
+4. **En Render**: Después de las migraciones, ejecuta `python manage.py seed_data` para cargar los datos iniciales
+
+**Nota**: Si no cargas fixtures, la base de datos en producción estará vacía (solo con las tablas creadas por las migraciones).
+
+10. **Crear usuario para autenticación JWT**
+
+Para poder autenticarte en la API y obtener tokens JWT, necesitas crear un usuario:
+
 ```bash
 python manage.py createsuperuser
 ```
 
-9. **Ejecutar servidor de desarrollo**
+Este comando te pedirá:
+- **Username**: (ej: `admin`)
+- **Email**: (opcional, ej: `admin@example.com`)
+- **Password**: ⚠️ **Guarda esta contraseña en un gestor seguro como Bitwarden**
+
+**Luego, para obtener el JWT token:**
+1. Ve a `http://localhost:8000/api/docs/`
+2. Busca el endpoint `POST /api/auth/token/`
+3. Envía:
+   ```json
+   {
+     "username": "admin",
+     "password": "tu_contraseña"
+   }
+   ```
+4. Copia el `access` token del response
+5. En Swagger, haz clic en "Authorize" y pega el token
+
+**Nota**: Este usuario también puede usarse para Django Admin (si está habilitado), pero el propósito principal es la autenticación en la API REST.
+
+11. **Ejecutar servidor de desarrollo**
 
 **Windows:**
 ```bash
@@ -585,6 +695,99 @@ docker-compose down -v
 - **backend**: Django API con health checks
 - **db**: PostgreSQL 13 con persistencia de datos
 
+## 📦 Gestión de Datos (Fixtures)
+
+### Exportar Datos de Desarrollo
+
+Para exportar los datos que creas localmente y poder cargarlos en producción:
+
+```bash
+# Exportar todos los datos
+python manage.py export_data
+
+# Exportar solo una app específica
+python manage.py export_data bancos
+python manage.py export_data clientes
+python manage.py export_data creditos
+```
+
+Los archivos se guardan en `fixtures/`:
+- `fixtures/bancos_data.json`
+- `fixtures/clientes_data.json`
+- `fixtures/creditos_data.json`
+
+### Crear Datos de Prueba (Desarrollo Local)
+
+Para generar datos de prueba masivamente en tu entorno local:
+
+```bash
+# Crear datos por defecto (12 bancos, 35 clientes, 60 créditos)
+python manage.py create_sample_data
+
+# Personalizar cantidades
+python manage.py create_sample_data --count-bancos 20 --count-clientes 50 --count-creditos 100
+
+# Limpiar datos existentes y crear nuevos
+python manage.py create_sample_data --clear
+```
+
+**Opciones disponibles:**
+- `--count-bancos N`: Número de bancos a crear (default: 12)
+- `--count-clientes N`: Número de clientes a crear (default: 35)
+- `--count-creditos N`: Número de créditos a crear (default: 60)
+- `--clear`: Eliminar todos los datos existentes antes de crear nuevos
+
+**Características de los datos generados:**
+- ✅ Relaciones válidas (clientes asociados a bancos, créditos asociados a clientes y bancos)
+- ✅ Respeta rangos configurados en cada banco (montos, plazos, tasas de interés)
+- ✅ Datos realistas con nombres, emails, direcciones, etc.
+- ✅ Variedad de estados y tipos para probar filtros
+
+### Cargar Datos en Producción
+
+**Opción 1: Comando automático (recomendado)**
+```bash
+python manage.py seed_data
+```
+
+**Opción 2: Cargar fixtures específicos**
+```bash
+python manage.py loaddata fixtures/bancos_data.json
+python manage.py loaddata fixtures/clientes_data.json
+python manage.py loaddata fixtures/creditos_data.json
+```
+
+### Proceso para Despliegue en Render
+
+1. **En desarrollo local:**
+   ```bash
+   # Opción A: Crear datos de prueba masivamente
+   python manage.py create_sample_data
+   
+   # Opción B: Crear datos manualmente usando la API o frontend
+   # Luego exporta:
+   python manage.py export_data
+   ```
+
+2. **Sube los fixtures al repositorio:**
+   ```bash
+   git add fixtures/
+   git commit -m "Add initial data fixtures"
+   git push
+   ```
+
+3. **En Render (después de las migraciones):**
+   - Agrega un comando de build/post-deploy:
+     ```bash
+     python manage.py seed_data --skip-existing
+     ```
+   - O ejecuta manualmente después del primer despliegue
+
+**⚠️ Importante:**
+- Sin fixtures, la base de datos en producción estará **vacía** (solo estructura)
+- Los fixtures deben estar en el repositorio para que Render los tenga disponibles
+- Usa `--skip-existing` para evitar errores si los datos ya existen
+
 ## 📁 Estructura del Proyecto
 
 ```
@@ -618,7 +821,13 @@ tu_credito/
 │   └── core/             # App core (utils, health)
 │       ├── views.py      # Health check
 │       ├── exceptions.py # Exception handler personalizado
-│       └── urls.py       # URLs centrales (auth, health)
+│       ├── urls.py       # URLs centrales (auth, health)
+│       └── management/
+│           └── commands/  # Comandos personalizados de Django
+│               ├── migrate_auto.py      # Migración automática (makemigrations + migrate)
+│               ├── create_sample_data.py # Crear datos de prueba masivamente
+│               ├── export_data.py        # Exportar datos a fixtures
+│               └── seed_data.py         # Cargar datos desde fixtures
 ├── tu_credito/
 │   ├── settings/
 │   │   ├── base.py       # Settings base (común)
@@ -632,6 +841,16 @@ tu_credito/
 │   ├── test_clientes.py
 │   ├── test_creditos.py
 │   └── test_health.py
+├── fixtures/              # Datos exportados (fixtures JSON)
+│   ├── .gitkeep
+│   ├── bancos_data.json
+│   ├── clientes_data.json
+│   └── creditos_data.json
+├── scripts/               # Scripts de utilidad
+│   ├── init_db.bat       # Inicialización Windows
+│   ├── init_db.sh        # Inicialización Linux/Mac
+│   ├── migrate.bat       # Migraciones Windows
+│   └── migrate.sh        # Migraciones Linux/Mac
 ├── conftest.py           # Fixtures compartidos de pytest
 ├── pytest.ini            # Configuración pytest
 ├── manage.py
@@ -768,17 +987,39 @@ chmod +x scripts/init_db.sh
 
 **Actualización (cuando hay cambios en modelos):**
 
+Tanto el comando personalizado como los scripts ejecutan automáticamente:
+1. `makemigrations` - Crea los archivos de migración
+2. `migrate` - Aplica las migraciones a la base de datos
+
+### Opción 1: Comando de Django (Recomendado - Multiplataforma)
+
+**Migrar TODOS los modelos:**
+```bash
+cd back
+python manage.py migrate
+```
+
+**Migrar un modelo específico (ejemplo: `bancos`):**
+```bash
+cd back
+python manage.py migrate bancos
+```
+
+### Opción 2: Scripts (Windows/Linux/Mac)
+
 **Windows:**
 ```bash
 cd back
-scripts\migrate.bat
+scripts\migrate.bat          # Para todos los modelos
+scripts\migrate.bat bancos   # Para un modelo específico
 ```
 
 **Linux/Mac:**
 ```bash
 cd back
-chmod +x scripts/migrate.sh
-./scripts/migrate.sh
+chmod +x scripts/migrate.sh  # Solo la primera vez
+./scripts/migrate.sh          # Para todos los modelos
+./scripts/migrate.sh bancos   # Para un modelo específico
 ```
 
 **Comandos útiles:**
@@ -786,14 +1027,14 @@ chmod +x scripts/migrate.sh
 # Ver estado de migraciones
 python manage.py showmigrations
 
-# Crear nueva migración después de modificar modelos
-python manage.py makemigrations
+# Crear nueva migración después de modificar modelos (sin aplicar)
+python manage.py makemigrations          # Para todos los modelos
+python manage.py makemigrations bancos # Para un modelo específico
 
-# Aplicar todas las migraciones
-python manage.py migrate
-
-# Aplicar migraciones de una app específica
-python manage.py migrate creditos
+# Aplicar migraciones existentes (sin crear nuevas)
+# Nota: El comando personalizado 'migrate' ejecuta ambos pasos.
+# Si necesitas solo aplicar sin crear, usa el comando original de Django:
+python manage.py migrate --help       # Ver opciones disponibles
 ```
 
 **Importante sobre datos existentes:**

@@ -22,6 +22,7 @@ class CreditoSerializer(serializers.ModelSerializer):
             'cliente',
             'cliente_info',
             'descripcion',
+            'monto',
             'pago_minimo',
             'pago_maximo',
             'plazo_meses',
@@ -81,6 +82,14 @@ class CreditoSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("El pago mínimo debe ser mayor a 0.")
         return value
 
+    def validate_monto(self, value):
+        """
+        Validar que el monto sea positivo.
+        """
+        if value <= 0:
+            raise serializers.ValidationError("El monto debe ser mayor a 0.")
+        return value
+
     def validate_pago_maximo(self, value):
         """
         Validar que el pago máximo sea positivo.
@@ -137,6 +146,7 @@ class CreditoListSerializer(serializers.ModelSerializer):
             'id',
             'cliente_nombre',
             'descripcion',
+            'monto',
             'pago_minimo',
             'pago_maximo',
             'plazo_meses',

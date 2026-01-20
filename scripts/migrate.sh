@@ -1,10 +1,10 @@
 #!/bin/bash
-# Script para ejecutar migraciones de Django en Linux/Mac
+# Script para crear y ejecutar migraciones de Django en Linux/Mac
 # Uso: ./migrate.sh [app_name]
 # Si no se especifica app_name, ejecuta todas las migraciones
 
 echo "========================================"
-echo "Ejecutando migraciones de Django"
+echo "Creando y ejecutando migraciones de Django"
 echo "========================================"
 echo ""
 
@@ -21,19 +21,19 @@ else
 fi
 
 echo ""
-echo "Ejecutando migraciones..."
+echo "Ejecutando migraciones (crea y aplica automáticamente)..."
 echo ""
 
 if [ -z "$1" ]; then
-    python manage.py migrate
+    python manage.py migrate_auto
 else
-    python manage.py migrate "$1"
+    python manage.py migrate_auto "$1"
 fi
 
 if [ $? -eq 0 ]; then
     echo ""
     echo "========================================"
-    echo "Migraciones ejecutadas exitosamente!"
+    echo "Migraciones creadas y aplicadas exitosamente!"
     echo "========================================"
 else
     echo ""
