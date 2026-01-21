@@ -217,10 +217,12 @@ X_FRAME_OPTIONS = 'DENY'
 # CSP (Content Security Policy)
 # Configuración básica de CSP para proteger contra XSS y otros ataques
 CSP_DEFAULT_SRC = ("'self'",)
-CSP_SCRIPT_SRC = ("'self'", "'unsafe-inline'",)  # 'unsafe-inline' necesario para Swagger UI
-CSP_STYLE_SRC = ("'self'", "'unsafe-inline'",)  # 'unsafe-inline' necesario para Swagger UI
+CSP_SCRIPT_SRC = ("'self'", "'unsafe-inline'", "https://cdn.jsdelivr.net",)  # 'unsafe-inline' y cdn.jsdelivr.net necesario para Swagger UI
+CSP_SCRIPT_SRC_ELEM = ("'self'", "'unsafe-inline'", "https://cdn.jsdelivr.net",)  # Específico para elementos <script>
+CSP_STYLE_SRC = ("'self'", "'unsafe-inline'", "https://cdn.jsdelivr.net",)  # 'unsafe-inline' y cdn.jsdelivr.net necesario para Swagger UI
+CSP_STYLE_SRC_ELEM = ("'self'", "'unsafe-inline'", "https://cdn.jsdelivr.net",)  # Específico para elementos <style> y <link>
 CSP_IMG_SRC = ("'self'", "data:", "https:",)
-CSP_FONT_SRC = ("'self'", "data:",)
+CSP_FONT_SRC = ("'self'", "data:", "https://cdn.jsdelivr.net",)  # Para fuentes de Swagger UI
 CSP_CONNECT_SRC = ("'self'",)
 CSP_FRAME_SRC = ("'self'",)  # Para Swagger UI iframes
 CSP_OBJECT_SRC = ("'none'",)
