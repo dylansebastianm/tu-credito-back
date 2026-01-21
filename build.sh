@@ -23,7 +23,8 @@ echo "📁 Recopilando archivos estáticos..."
 python manage.py collectstatic --noinput
 
 # Cargar datos iniciales (fixtures)
+# Deshabilitar emails durante la carga de datos para acelerar el deploy
 echo "📊 Cargando datos iniciales..."
-python manage.py seed_data --skip-existing
+DISABLE_EMAIL_SIGNALS=1 python manage.py seed_data --skip-existing
 
 echo "✅ Build completado exitosamente!"
