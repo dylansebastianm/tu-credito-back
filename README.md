@@ -349,6 +349,7 @@ python manage.py loaddata fixtures/creditos_data.json
 
 Para poder autenticarte en la API y obtener tokens JWT, necesitas crear un usuario:
 
+**Opción 1: Comando interactivo (desarrollo local)**
 ```bash
 python manage.py createsuperuser
 ```
@@ -357,6 +358,35 @@ Este comando te pedirá:
 - **Username**: (ej: `admin`)
 - **Email**: (opcional, ej: `admin@example.com`)
 - **Password**: ⚠️ **Guarda esta contraseña en un gestor seguro como Bitwarden**
+
+**Opción 2: Comando no interactivo (producción)**
+```bash
+python manage.py create_superuser_if_not_exists \
+  --username admin \
+  --email admin@example.com \
+  --password tu_password_seguro
+```
+
+O usando variables de entorno:
+```bash
+export SUPERUSER_USERNAME=admin
+export SUPERUSER_EMAIL=admin@example.com
+export SUPERUSER_PASSWORD=tu_password_seguro
+python manage.py create_superuser_if_not_exists
+```
+
+**Verificar usuarios en la base de datos:**
+```bash
+# Listar todos los usuarios
+python manage.py list_users
+
+# Listar solo superusuarios
+python manage.py list_users --superusers-only
+
+# Buscar usuario específico
+python manage.py list_users --username admin
+python manage.py list_users --email admin@example.com
+```
 
 **Luego, para obtener el JWT token:**
 1. Ve a `http://localhost:8000/api/docs/`

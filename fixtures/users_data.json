@@ -1,0 +1,38 @@
+[
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$Znf7j37T2WJ9GJCjCgHXJz$XJSLdvdhNhr61ehMM12VZDS6gjCWRmY0QoAKUs6evC8=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@trucredito.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-01-20T17:24:22.197Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$So3rDSnzDZF4xCnbP0BOtq$pmB717qLqNzxhChndCUh4gFtUSYqWRZoUj7S8KAi7dQ=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "dylansm",
+    "first_name": "Dylan",
+    "last_name": "Marcote",
+    "email": "dylan@tucredito.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-01-20T18:18:17.308Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
