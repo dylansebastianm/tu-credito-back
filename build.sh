@@ -11,8 +11,11 @@ echo "📦 Instalando dependencias..."
 pip install --upgrade pip
 pip install -r requirements.txt
 
-# Ejecutar migraciones
-echo "🗄️ Ejecutando migraciones..."
+# Crear y ejecutar migraciones
+echo "🗄️ Creando migraciones..."
+python manage.py makemigrations --noinput || echo "⚠️ No hay migraciones nuevas para crear"
+
+echo "🗄️ Aplicando migraciones..."
 python manage.py migrate --noinput
 
 # Recopilar archivos estáticos
@@ -21,6 +24,6 @@ python manage.py collectstatic --noinput
 
 # Cargar datos iniciales (fixtures)
 echo "📊 Cargando datos iniciales..."
-python manage.py seed_data --skip-existing || echo "⚠️ Algunos fixtures no se cargaron (puede ser normal si ya existen)"
+python manage.py seed_data --skip-existing
 
 echo "✅ Build completado exitosamente!"

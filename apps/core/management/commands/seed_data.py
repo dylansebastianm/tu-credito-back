@@ -82,10 +82,17 @@ class Command(BaseCommand):
                 if skip_existing and ('already exists' in error_msg.lower() or 'duplicate key' in error_msg.lower()):
                     self.stdout.write(self.style.WARNING(f'⚠ {fixture_file.name} ya existe, omitiendo...'))
                     loaded_count += 1  # Contar como cargado si se omite intencionalmente
-                elif 'IntegrityError' in error_msg or 'Foreign key' in error_msg:
-                    self.stdout.write(self.style.ERROR(f'✗ Error de integridad en {fixture_file.name}: {error_msg}'))
-                    errors.append(f'{fixture_file.name}: {error_msg}')
+                elif 'IntegrityError' in error_msg or 'Foreign key' in error_msg or 'violates foreign key constraint' in error_msg.lower() or 'does not exist' in error_msg.lower():
+                    # Error de foreign key - mostrar detalles completos
+                    self.stdout.write(self.style.ERROR(f'✗ Error de integridad en {fixture_file.name}:'))
+                    self.stdout.write(self.style.ERROR(f'  {error_msg[:500]}'))  # Limitar longitud del mensaje
+                    if 'creditos' in fixture_file.name.lower():
+                        self.stdout.write(self.style.WARNING('  ⚠ Los créditos requieren que clientes y bancos ya estén cargados'))
+                        self.stdout.write(self.style.WARNING('  ⚠ Verifica que los IDs de cliente y banco en créditos existan en la base de datos'))
+                    self.stdout.write(self.style.WARNING('  ⚠ Solución: Re-exporta todos los fixtures juntos con: python manage.py export_data'))
+                    errors.append(f'{fixture_file.name}: {error_msg[:200]}')
                     error_count += 1
+                    # Con skip_existing, continuar pero mostrar el error claramente
                     if not skip_existing:
                         raise CommandError(f'Error de integridad cargando {fixture_file.name}: {error_msg}')
                 else:
