@@ -14,11 +14,8 @@ SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
 
 # Production logging
-LOGGING['handlers']['file'] = {
-    'class': 'logging.handlers.RotatingFileHandler',
-    'filename': os.path.join(BASE_DIR, 'logs', 'tu_credito.log'),
-    'maxBytes': 1024 * 1024 * 10,  # 10 MB
-    'backupCount': 10,
-    'formatter': 'json',
-}
-LOGGING['root']['handlers'] = ['file', 'console']
+# En Render, los logs se capturan automáticamente desde la consola
+# No necesitamos archivos de log, Render los maneja
+LOGGING['root']['handlers'] = ['console']
+LOGGING['loggers']['django']['handlers'] = ['console']
+LOGGING['loggers']['apps']['handlers'] = ['console']
