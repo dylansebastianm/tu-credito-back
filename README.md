@@ -653,19 +653,43 @@ GET /api/bancos/?ordering=nombre
 
 ## 📚 API Documentation
 
-### Swagger UI (Interactivo)
+### Desarrollo Local
+
+#### Swagger UI (Interactivo)
 ```
 http://localhost:8000/api/docs/
 ```
 
-### ReDoc (Alternativa)
+#### ReDoc (Alternativa)
 ```
 http://localhost:8000/api/redoc/
 ```
 
-### Esquema OpenAPI (JSON)
+#### Esquema OpenAPI (JSON)
 ```
 http://localhost:8000/api/schema/
+```
+
+### Producción (Render)
+
+#### Swagger UI (Interactivo)
+```
+https://tu-credito-backend.onrender.com/api/docs/
+```
+
+#### ReDoc (Alternativa)
+```
+https://tu-credito-backend.onrender.com/api/redoc/
+```
+
+#### Esquema OpenAPI (JSON)
+```
+https://tu-credito-backend.onrender.com/api/schema/
+```
+
+#### Health Check
+```
+https://tu-credito-backend.onrender.com/health/
 ```
 
 La documentación incluye:
