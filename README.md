@@ -731,33 +731,51 @@ La documentación incluye:
 
 ## 🧪 Testing
 
+El proyecto usa **pytest** y **pytest-django** para testing. Los tests cubren modelos, endpoints API, servicios y validaciones de negocio.
+
+### ¿Qué se está testeando?
+
+- ✅ **Modelos**: Validaciones de campos, métodos personalizados, relaciones
+- ✅ **Endpoints API**: CRUD completo (GET, POST, PUT, PATCH, DELETE)
+- ✅ **Service Layer**: Lógica de negocio (eliminación segura, validaciones complejas)
+- ✅ **Filtros y búsquedas**: Filtrado por campos, búsqueda por texto
+- ✅ **Autenticación**: JWT tokens, permisos, protección de endpoints
+- ✅ **Validaciones de negocio**: Edad coherente, rangos de pago, relaciones
+- ✅ **Health check**: Endpoint de estado del servicio
+
 ### Ejecutar Tests
 
 ```bash
-# Todos los tests
-pytest
+# Todos los tests con verbosidad
+pytest tests/ -v
 
-# Con cobertura
-pytest --cov=apps --cov-report=html
+# Con cobertura de código
+pytest tests/ --cov=apps --cov-report=html
 
-# Tests específicos
-pytest tests/test_bancos.py
-pytest tests/test_clientes.py
-pytest tests/test_creditos.py
+# Tests específicos por archivo
+pytest tests/test_bancos.py -v
+pytest tests/test_clientes.py -v
+pytest tests/test_creditos.py -v
+pytest tests/test_services.py -v
 
-# Tests con verbosidad
-pytest -v
+# Tests específicos por función/clase
+pytest tests/test_bancos.py::TestBancoModel -v
+pytest tests/test_services.py::TestBancoService -v
+
+# Ver cobertura en terminal
+pytest tests/ --cov=apps --cov-report=term-missing
 ```
 
 ### Estructura de Tests
 
-Los tests cubren:
-- ✅ Validaciones de modelos
-- ✅ Endpoints CRUD completos
-- ✅ Filtros y búsquedas
-- ✅ Autenticación y permisos
-- ✅ Validaciones de negocio (edad, pagos, etc.)
-- ✅ Health check endpoint
+```
+tests/
+├── test_bancos.py      # Tests de modelo y API de Bancos
+├── test_clientes.py    # Tests de modelo y API de Clientes
+├── test_creditos.py    # Tests de modelo y API de Créditos
+├── test_services.py   # Tests de Service Layer (lógica de negocio)
+└── test_health.py      # Tests de health check endpoint
+```
 
 ### Fixtures Disponibles
 

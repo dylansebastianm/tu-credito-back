@@ -19,4 +19,8 @@ python manage.py migrate --noinput
 echo "📁 Recopilando archivos estáticos..."
 python manage.py collectstatic --noinput
 
+# Cargar datos iniciales (fixtures)
+echo "📊 Cargando datos iniciales..."
+python manage.py seed_data --skip-existing || echo "⚠️ Algunos fixtures no se cargaron (puede ser normal si ya existen)"
+
 echo "✅ Build completado exitosamente!"
