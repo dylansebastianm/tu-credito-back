@@ -16,8 +16,22 @@ logger = logging.getLogger(__name__)
 def enviar_email_credito_creado(sender, instance, created, **kwargs):
     """
     Envía un email al cliente cuando se crea un crédito.
+    Si falla el envío, solo se registra el error sin bloquear el proceso.
     """
     if created:
+        # Verificar si el email está configurado antes de intentar enviar
+        # Si es console backend o no hay credenciales SMTP, no intentar enviar
+        email_backend = getattr(settings, 'EMAIL_BACKEND', '')
+        email_host_user = getattr(settings, 'EMAIL_HOST_USER', '')
+        
+        if not email_backend or 'console' in email_backend or not email_host_user:
+            # En desarrollo o si no hay backend/credenciales configurados, solo loguear
+            logger.debug(
+                f"Email no enviado para crédito {instance.id} (EMAIL_BACKEND: {email_backend}, EMAIL_HOST_USER: {'configurado' if email_host_user else 'no configurado'})",
+                extra={'credito_id': instance.id}
+            )
+            return
+        
         try:
             cliente = instance.cliente
             banco = instance.banco
@@ -47,7 +61,7 @@ Equipo Tu Crédito
                 message,
                 settings.EMAIL_HOST_USER or 'noreply@tucredito.com',
                 [cliente.email],
-                fail_silently=False,
+                fail_silently=True,  # No fallar si no se puede enviar el email
             )
             
             logger.info(
