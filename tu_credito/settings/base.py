@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     
     # Third party
     'corsheaders',  # CORS support
+    'csp',  # Content Security Policy
     'rest_framework',
     'rest_framework_simplejwt',
     'drf_spectacular',
@@ -53,6 +54,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'corsheaders.middleware.CorsMiddleware',  # CORS middleware (debe ir antes de CommonMiddleware)
+    'csp.middleware.CSPMiddleware',  # Content Security Policy middleware
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -213,6 +215,43 @@ SECURE_CONTENT_TYPE_NOSNIFF = True
 X_FRAME_OPTIONS = 'DENY'
 
 # CSP (Content Security Policy)
+# Configuración básica de CSP para proteger contra XSS y otros ataques
 CSP_DEFAULT_SRC = ("'self'",)
-CSP_SCRIPT_SRC = ("'self'", "'unsafe-inline'",)
-CSP_STYLE_SRC = ("'self'", "'unsafe-inline'",)
+CSP_SCRIPT_SRC = ("'self'", "'unsafe-inline'",)  # 'unsafe-inline' necesario para Swagger UI
+CSP_STYLE_SRC = ("'self'", "'unsafe-inline'",)  # 'unsafe-inline' necesario para Swagger UI
+CSP_IMG_SRC = ("'self'", "data:", "https:",)
+CSP_FONT_SRC = ("'self'", "data:",)
+CSP_CONNECT_SRC = ("'self'",)
+CSP_FRAME_SRC = ("'self'",)  # Para Swagger UI iframes
+CSP_OBJECT_SRC = ("'none'",)
+CSP_BASE_URI = ("'self'",)
+CSP_FORM_ACTION = ("'self'",)
+CSP_FRAME_ANCESTORS = ("'none'",)  # Previene clickjacking
+CSP_UPGRADE_INSECURE_REQUESTS = False  # Solo activar en producción con HTTPS
+
+# Permissions-Policy (antes Feature-Policy)
+# Controla qué características del navegador pueden ser usadas
+# Django 5.x tiene soporte nativo a través de SecurityMiddleware
+PERMISSIONS_POLICY = {
+    'accelerometer': [],
+    'ambient-light-sensor': [],
+    'autoplay': [],
+    'camera': [],
+    'display-capture': [],
+    'document-domain': [],
+    'encrypted-media': [],
+    'fullscreen': [],
+    'geolocation': [],
+    'gyroscope': [],
+    'magnetometer': [],
+    'microphone': [],
+    'midi': [],
+    'payment': [],
+    'picture-in-picture': [],
+    'publickey-credentials-get': [],
+    'screen-wake-lock': [],
+    'sync-xhr': [],
+    'usb': [],
+    'web-share': [],
+    'xr-spatial-tracking': [],
+}

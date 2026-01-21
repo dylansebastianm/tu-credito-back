@@ -1132,20 +1132,54 @@ python manage.py migrate --help       # Ver opciones disponibles
 - Las vistas delegan operaciones complejas a los servicios
 - Esto facilita el testing unitario y mantiene el código modular y escalable
 
-### Uso de IA (si aplica)
+### Uso de IA
 
-Si utilizaste herramientas de IA (ChatGPT, Copilot, Cursor, Claude, etc.) durante el desarrollo:
+Se utilizaron herramientas de IA (Cursor, ChatGPT) de manera estratégica y selectiva en las siguientes áreas del desarrollo:
 
-**Por favor documenta:**
-1. En qué parte del proceso la utilizaste
-2. Por qué te pareció apropiado usarla en ese caso
+1. **Modularización y estructuración de componentes**
+   - Asistencia en la organización de la arquitectura en capas (Models, Serializers, Services, Views)
+   - Refactorización de código para mejorar la separación de responsabilidades
+   - **Razón**: Acelerar la implementación de patrones arquitectónicos complejos mientras se mantiene la calidad del código
 
-**Ejemplo:**
-- **Inicio de proyecto**: Usé IA para generar la estructura inicial de archivos siguiendo las convenciones de Django
-- **Documentación**: Usé IA para generar plantillas de docstrings consistentes
-- **Debugging**: Usé IA para identificar problemas en queries de base de datos
+2. **Escritura y generación de código repetitivo**
+   - Generación de tests unitarios para Service Layer
+   - Creación de fixtures y datos de prueba
+   - **Razón**: Reducir tiempo en tareas repetitivas, permitiendo enfocarse en lógica de negocio y validaciones críticas
 
-_Nota: Si no utilizaste IA, indica "No se utilizó IA en el desarrollo de este proyecto"._
+3. **Documentación y comentarios**
+   - Generación de docstrings consistentes
+   - Elaboración de documentación técnica en README
+   - **Razón**: Mantener documentación completa y profesional mientras se acelera el proceso de escritura
+
+4. **Integración y conexión de servicios**
+   - Configuración de middleware (CSP, CORS)
+   - Integración de librerías de terceros (django-csp, drf-spectacular)
+   - **Razón**: Asegurar configuración correcta de componentes complejos siguiendo mejores prácticas
+
+5. **Toma de decisiones técnicas**
+   - Consulta sobre mejores prácticas para implementación de seguridad (CSP, Permissions-Policy)
+   - Evaluación de opciones para arquitectura (Service Layer vs otras alternativas)
+   - **Razón**: Validar decisiones técnicas contra estándares de la industria y mejores prácticas actuales
+
+6. **Resolución de errores de build y debugging**
+   - Identificación y corrección de errores de TypeScript en frontend
+   - Resolución de problemas de configuración en settings de Django
+   - **Razón**: Acelerar el proceso de debugging manteniendo la calidad del código
+
+7. **Testing y validación**
+   - Generación de casos de prueba para Service Layer
+   - Validación de cobertura de tests según requisitos
+   - **Razón**: Asegurar cobertura completa de tests mientras se mantiene la calidad y exhaustividad
+
+#### Enfoque del uso de IA:
+
+La IA se utilizó como herramienta de **productividad y validación**, no como reemplazo del conocimiento técnico. Todas las decisiones finales, arquitectura y lógica de negocio fueron diseñadas y revisadas por el desarrollador, utilizando IA principalmente para:
+- Acelerar tareas repetitivas
+- Validar decisiones técnicas
+- Mantener consistencia en documentación
+- Resolver problemas técnicos específicos
+
+Este enfoque permitió mantener la calidad y coherencia del código mientras se optimizaba el tiempo de desarrollo.
 
 ## 👥 Contribución
 

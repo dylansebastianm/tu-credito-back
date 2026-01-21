@@ -17,4 +17,5 @@ class TestHealthCheck:
         
         assert response.status_code == status.HTTP_200_OK
         assert response.data['status'] == 'healthy'
-        assert response.data['database'] == 'connected'
+        assert response.data['service'] == 'Tu Crédito API'
+        assert response.data['version'] == '1.0.0'

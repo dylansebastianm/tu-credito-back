@@ -43,3 +43,6 @@ CORS_ALLOW_HEADERS = [
 LOGGING['root']['handlers'] = ['console']
 LOGGING['loggers']['django']['handlers'] = ['console']
 LOGGING['loggers']['apps']['handlers'] = ['console']
+
+# CSP para producción - activar upgrade insecure requests
+CSP_UPGRADE_INSECURE_REQUESTS = True
