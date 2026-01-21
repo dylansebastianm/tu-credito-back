@@ -61,6 +61,20 @@ class Command(BaseCommand):
                             self.stdout.write(self.style.WARNING(f'⚠ {app} no tiene datos para exportar'))
                     except Exception as e:
                         self.stdout.write(self.style.ERROR(f'✗ Error exportando {app}: {str(e)}'))
+                
+                # Exportar usuarios (auth.user)
+                output_file = fixtures_path / 'users_data.json'
+                try:
+                    call_command('dumpdata', 'auth.user', indent=2, output=str(output_file), verbosity=1)
+                    # Verificar si el archivo tiene contenido (más que solo [])
+                    if output_file.exists() and output_file.stat().st_size > 10:
+                        self.stdout.write(self.style.SUCCESS(f'✓ Usuarios exportados a {output_file}'))
+                    else:
+                        # Eliminar archivo vacío
+                        output_file.unlink(missing_ok=True)
+                        self.stdout.write(self.style.WARNING('⚠ No hay usuarios para exportar'))
+                except Exception as e:
+                    self.stdout.write(self.style.ERROR(f'✗ Error exportando usuarios: {str(e)}'))
 
             self.stdout.write('')
             self.stdout.write(self.style.SUCCESS('=' * 50))
